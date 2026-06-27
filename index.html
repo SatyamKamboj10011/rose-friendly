@@ -1,0 +1,2068 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rose Friendly | Veg & Non-Veg Restaurant — Radaur, Yamuna Nagar</title>
+  <meta name="description" content="Rose Friendly — Haryana's premier Veg & Non-Veg restaurant in Radaur, Yamuna Nagar. Serving breakfast, lunch & dinner." />
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Rose Friendly — Radaur's Finest Restaurant" />
+  <meta property="og:description" content="Veg & Non-Veg Indian cuisine, Indo-Chinese, Tandoori & Chaap. Open 11 AM–11 PM, closed Tuesdays. S.K Road, Radaur, Yamuna Nagar." />
+  <meta property="og:image"       content="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&auto=format&fit=crop&q=80" />
+  <meta property="og:type"        content="restaurant" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23FF4500'/><text y='.9em' font-size='72' x='12'>🍽</text></svg>" />
+  <!-- PWA / Mobile -->
+  <meta name="theme-color" content="#FF4500" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Rose Friendly" />
+  <!-- Canonical -->
+  <link rel="canonical" href="https://rosefriendly.netlify.app/" />
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Rose Friendly",
+    "description": "Haryana's premier Veg & Non-Veg restaurant in Radaur, Yamuna Nagar. Serving Indian, Indo-Chinese, Tandoori and Chaap dishes for breakfast, lunch and dinner.",
+    "url": "https://rosefriendly.netlify.app/",
+    "telephone": ["+91-8222937052", "+91-9991370704"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Near Sawraj Tractor Agency, S.K Road",
+      "addressLocality": "Radaur",
+      "addressRegion": "Haryana",
+      "postalCode": "135133",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 30.0366,
+      "longitude": 77.0555
+    },
+    "openingHoursSpecification": [
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"11:00","closes":"23:00"}
+    ],
+    "servesCuisine": ["North Indian","Indo-Chinese","Tandoori","Mughlai"],
+    "priceRange": "₹₹",
+    "currenciesAccepted": "INR",
+    "paymentAccepted": "Cash, UPI",
+    "hasMenu": "https://rosefriendly.netlify.app/menu.pdf",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&auto=format&fit=crop&q=80",
+    "sameAs": ["https://www.instagram.com/rose_friendly_restaurant/"]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+  <!-- Reduced font weights: only what's actually used -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;0,800;1,400;1,700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Preload hero image so it's ready before first paint -->
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&auto=format&fit=crop&q=65" />
+
+  <style>
+  /* ============================================================
+     DESIGN TOKENS — DARK (default)
+  ============================================================ */
+  :root {
+    --bg:       #0A0A0A;
+    --bg-card:  #111111;
+    --bg-elev:  #181818;
+    --bg-glass: rgba(15,15,15,0.75);
+    --aa:       #FF4500;
+    --ab:       #D4AF37;
+    --ab-dim:   rgba(212,175,55,0.12);
+    --ab-glow:  rgba(212,175,55,0.25);
+    --tx:       #F4EFE6;
+    --tx-m:     rgba(244,239,230,0.52);
+    --tx-f:     rgba(244,239,230,0.18);
+    --border:   rgba(255,255,255,0.06);
+    --border-g: rgba(212,175,55,0.14);
+    --serif:    'Cormorant Garamond', Georgia, serif;
+    --sans:     'Plus Jakarta Sans', system-ui, sans-serif;
+    --ec:       cubic-bezier(0.25,0.46,0.45,0.94);
+    --es:       cubic-bezier(0.34,1.56,0.64,1);
+    --r:        4px;
+  }
+
+  /* ============================================================
+     LIGHT THEME
+  ============================================================ */
+  [data-theme="light"] {
+    --bg:       #FAF7F0;
+    --bg-card:  #F2EDE2;
+    --bg-elev:  #E8E1D4;
+    --bg-glass: rgba(250,247,240,0.82);
+    --tx:       #1A1208;
+    --tx-m:     rgba(26,18,8,0.58);
+    --tx-f:     rgba(26,18,8,0.28);
+    --border:   rgba(26,18,8,0.07);
+    --border-g: rgba(212,175,55,0.22);
+  }
+  [data-theme="light"] .hero-veil  { background:linear-gradient(180deg,rgba(10,10,10,.52) 0%,rgba(10,10,10,.22) 50%,rgba(10,10,10,.72) 100%); }
+  [data-theme="light"] #grain      { opacity:.018; }
+  [data-theme="light"] .about-bg-word { -webkit-text-stroke-color:rgba(212,175,55,.08); }
+  [data-theme="light"] .footer-map iframe { filter:hue-rotate(0deg) saturate(.85) brightness(.95); }
+  [data-theme="light"] .menu-tabs-wrap  { background:rgba(250,247,240,0.95); }
+  [data-theme="light"] .panel-num { -webkit-text-stroke-color:rgba(26,18,8,.07); }
+
+  /* ============================================================
+     RESET
+  ============================================================ */
+  *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body { background:var(--bg); color:var(--tx); font-family:var(--sans); overflow-x:hidden; cursor:none; transition:background .4s, color .4s; }
+  a { color:inherit; text-decoration:none; }
+  ul { list-style:none; }
+  button { background:none; border:none; cursor:none; color:inherit; font-family:inherit; }
+  img { display:block; }
+
+  /* ============================================================
+     GRAIN
+  ============================================================ */
+  #grain {
+    position:fixed; inset:-200%; width:400%; height:400%; pointer-events:none; z-index:9999;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity:0.035; animation:grainAnim 7s steps(2) infinite; transition:opacity .4s;
+  }
+  @keyframes grainAnim {
+    0%{transform:translate(0,0)} 25%{transform:translate(-4%,8%)} 50%{transform:translate(-8%,4%)} 75%{transform:translate(4%,-8%)} 100%{transform:translate(0,0)}
+  }
+
+  /* ============================================================
+     CURSOR
+  ============================================================ */
+  #c-dot  { position:fixed; width:8px; height:8px; background:var(--aa); border-radius:50%; pointer-events:none; z-index:9998; transform:translate(-50%,-50%); transition:transform .1s, background .25s; }
+  #c-ring { position:fixed; width:38px; height:38px; border:1.5px solid rgba(255,69,0,.45); border-radius:50%; pointer-events:none; z-index:9997; transform:translate(-50%,-50%); transition:width .35s var(--es),height .35s var(--es),border-color .35s; }
+  body.cursor-hover #c-ring { width:56px; height:56px; border-color:var(--ab); }
+  body.cursor-hover #c-dot  { transform:translate(-50%,-50%) scale(2.2); background:var(--ab); }
+
+  /* ============================================================
+     DISH PREVIEW
+  ============================================================ */
+  #dish-preview {
+    position:fixed; width:190px; height:190px; border-radius:50%; overflow:hidden; pointer-events:none; z-index:8000;
+    opacity:0; transform:translate(-50%,-50%) scale(.5) rotate(-8deg);
+    transition:opacity .3s var(--ec), transform .3s var(--es);
+    border:2px solid rgba(212,175,55,.22); box-shadow:0 20px 60px rgba(0,0,0,.7),0 0 40px rgba(255,69,0,.08);
+  }
+  #dish-preview.show { opacity:1; transform:translate(-50%,-50%) scale(1) rotate(0deg); }
+  #dish-preview img  { width:100%; height:100%; object-fit:cover; filter:saturate(1.3) brightness(.95); }
+
+  /* ============================================================
+     NAV
+  ============================================================ */
+  #nav {
+    position:fixed; top:0; left:0; right:0; z-index:1000;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:26px 56px;
+    transition:padding .4s var(--ec), background .4s, backdrop-filter .4s;
+  }
+  #nav.scrolled {
+    background:var(--bg-glass); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px);
+    padding:15px 56px;
+    border-bottom:1px solid var(--border-g);
+    box-shadow:0 4px 40px rgba(0,0,0,.22);
+  }
+
+  /* Logo */
+  .nav-logo { font-family:var(--serif); font-size:1.08rem; font-weight:700; letter-spacing:.32em; text-transform:uppercase; display:flex; flex-direction:column; }
+  .nav-logo-main b { color:var(--ab); }
+  .nav-logo-sub { font-size:.44rem; letter-spacing:.44em; color:var(--tx-m); margin-top:2px; text-transform:uppercase; }
+  /* Nav always readable over hero image regardless of theme */
+  #nav:not(.scrolled) .nav-logo-main,
+  #nav:not(.scrolled) .nav-logo-sub  { color:rgba(244,239,230,0.92) !important; }
+  #nav:not(.scrolled) .nav-links a   { color:rgba(244,239,230,0.65) !important; }
+  #nav:not(.scrolled) .nav-links a:hover { color:#fff !important; }
+
+  /* Links */
+  .nav-links { display:flex; gap:42px; }
+  .nav-links a { font-size:.64rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--tx-m); position:relative; transition:color .3s; }
+  .nav-links a::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:1px; background:var(--ab); transition:width .35s var(--ec); }
+  .nav-links a:hover { color:var(--tx); }
+  .nav-links a:hover::after { width:100%; }
+
+  /* Nav right group */
+  .nav-right { display:flex; align-items:center; gap:18px; }
+
+  /* Theme toggle */
+  #theme-btn {
+    width:38px; height:38px; border-radius:50%;
+    border:1px solid var(--border-g);
+    display:flex; align-items:center; justify-content:center;
+    background:transparent; transition:background .3s, border-color .3s, transform .3s var(--es);
+    font-size:.95rem; flex-shrink:0;
+  }
+  #theme-btn:hover { background:var(--ab-dim); border-color:var(--ab); transform:rotate(20deg) scale(1.08); }
+
+  /* CTA */
+  .nav-cta {
+    font-size:.64rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase;
+    padding:12px 24px; background:var(--aa); color:#fff;
+    clip-path:polygon(7px 0%,100% 0%,calc(100% - 7px) 100%,0% 100%);
+    transition:transform .3s var(--es), box-shadow .3s;
+    display:inline-block;
+  }
+  .nav-cta:hover { transform:translateY(-2px); box-shadow:0 10px 32px rgba(255,69,0,.42); }
+
+  /* ============================================================
+     HERO
+  ============================================================ */
+  #hero { position:relative; height:100vh; overflow:hidden; display:flex; align-items:center; justify-content:center; }
+  .hero-bg-img { position:absolute; inset:-8%; background:url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&auto=format&fit=crop&q=65') center/cover no-repeat; animation:bgDrift 24s ease-in-out infinite alternate; will-change:transform; }
+  @keyframes bgDrift { 0%{transform:scale(1.08) translateY(0)} 100%{transform:scale(1.18) translateY(-3%)} }
+  .hero-veil  { position:absolute; inset:0; background:linear-gradient(180deg,rgba(10,10,10,.62) 0%,rgba(10,10,10,.28) 50%,rgba(10,10,10,.85) 100%); }
+  .hero-veil2 { position:absolute; inset:0; background:radial-gradient(ellipse 70% 60% at 50% 50%, rgba(255,69,0,.05) 0%, transparent 70%); }
+
+  /* 3D canvas */
+  #hero-canvas { position:absolute; inset:0; pointer-events:none; z-index:2; }
+
+  /* Sparks */
+  .sparks { position:absolute; inset:0; pointer-events:none; overflow:hidden; z-index:3; }
+  .sp { position:absolute; border-radius:50%; animation:spFloat linear infinite; opacity:0; }
+  @keyframes spFloat { 0%{transform:translateY(110vh) scale(0);opacity:0} 10%{opacity:.9} 90%{opacity:.3} 100%{transform:translateY(-10vh) translateX(40px) scale(1.5);opacity:0} }
+
+  .hero-content { position:relative; z-index:10; text-align:center; }
+  .hero-eyebrow { font-size:.64rem; letter-spacing:.46em; text-transform:uppercase; color:var(--ab); margin-bottom:32px; display:flex; align-items:center; justify-content:center; gap:18px; }
+  .hero-eyebrow::before,.hero-eyebrow::after { content:''; width:32px; height:1px; background:var(--ab); opacity:.55; }
+
+  .hero-title {
+    font-family:var(--serif); font-size:clamp(5rem,12vw,13rem); font-weight:800; line-height:.88;
+    text-transform:uppercase; letter-spacing:-.01em;
+    /* Solid cream — guaranteed visible on any browser, any theme, over the dark hero veil */
+    color:#F4EFE6;
+    text-shadow:
+      0 0 80px rgba(212,175,55,0.35),
+      0 0 160px rgba(255,69,0,0.15),
+      0 4px 40px rgba(0,0,0,0.6);
+    will-change:transform;
+  }
+  .hero-title .word { display:inline-block; overflow:hidden; }
+  .hero-title .char { display:inline-block; transform:translateY(110%); animation:charUp .9s var(--ec) forwards; }
+  @keyframes charUp { to{transform:translateY(0)} }
+
+  /* Hero text always white — hero sits over a dark food image regardless of theme */
+  .hero-sub  { font-size:.77rem; letter-spacing:.24em; color:rgba(244,239,230,0.7); margin-top:30px; opacity:0; animation:fadeSlideUp .8s 1.4s var(--ec) forwards; }
+  .hero-tags { display:flex; gap:12px; justify-content:center; margin-top:20px; flex-wrap:wrap; opacity:0; animation:fadeSlideUp .8s 1.6s var(--ec) forwards; }
+  .hero-tag  { font-size:.59rem; letter-spacing:.18em; text-transform:uppercase; padding:7px 16px; border:1px solid rgba(255,255,255,.22); color:rgba(244,239,230,0.7); }
+  .hero-tag.accent { border-color:var(--aa); color:var(--aa); }
+  .hero-tag.gold   { border-color:var(--ab); color:var(--ab); }
+
+  .hero-cta-row { margin-top:38px; display:flex; gap:16px; justify-content:center; opacity:0; animation:fadeSlideUp .8s 1.8s var(--ec) forwards; }
+  .hero-btn-primary {
+    font-size:.68rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase;
+    padding:15px 34px; background:var(--aa); color:#fff;
+    clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);
+    transition:transform .3s var(--es), box-shadow .3s;
+    display:inline-block;
+  }
+  .hero-btn-primary:hover { transform:translateY(-3px); box-shadow:0 14px 40px rgba(255,69,0,.45); }
+  .hero-btn-ghost {
+    font-size:.68rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase;
+    padding:14px 34px; border:1.5px solid rgba(212,175,55,.4); color:var(--ab);
+    clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);
+    transition:transform .3s var(--es), border-color .3s, background .3s;
+    display:inline-block;
+  }
+  .hero-btn-ghost:hover { background:var(--ab-dim); border-color:var(--ab); transform:translateY(-3px); }
+
+  @keyframes fadeSlideUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+
+  .hero-scroll { position:absolute; bottom:36px; left:50%; transform:translateX(-50%); z-index:10; display:flex; flex-direction:column; align-items:center; gap:8px; opacity:0; animation:fadeSlideUp .8s 2.1s var(--ec) forwards; }
+  .hero-scroll-line { width:1px; height:52px; background:linear-gradient(to bottom,transparent,var(--ab),transparent); animation:scrollPulse 2.2s ease-in-out infinite; }
+  @keyframes scrollPulse { 0%,100%{transform:scaleY(.3) translateY(-15px);opacity:.3} 50%{transform:scaleY(1);opacity:1} }
+  .hero-scroll-lbl { font-size:.56rem; letter-spacing:.32em; text-transform:uppercase; color:var(--tx-f); }
+
+  /* ============================================================
+     MARQUEE
+  ============================================================ */
+  .marquee-section { background:var(--aa); padding:14px 0; overflow:hidden; position:relative; z-index:20; }
+  .marquee-track { display:flex; animation:marqueeRun 28s linear infinite; white-space:nowrap; }
+  .marquee-item { font-family:var(--serif); font-size:1.05rem; font-weight:700; font-style:italic; letter-spacing:.08em; padding:0 36px; color:#fff; flex-shrink:0; }
+  .marquee-dot { color:rgba(255,255,255,.5); font-style:normal; }
+  @keyframes marqueeRun { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+  /* ============================================================
+     REVEAL UTILITIES
+  ============================================================ */
+  .clip-reveal { clip-path:inset(0 0 100% 0); transition:clip-path .9s var(--ec); }
+  .clip-reveal.in { clip-path:inset(0 0 0% 0); }
+  .fade-up  { opacity:0; transform:translateY(38px); transition:opacity .85s var(--ec),transform .85s var(--ec); }
+  .fade-up.in { opacity:1; transform:translateY(0); }
+  .fade-left  { opacity:0; transform:translateX(-42px); transition:opacity .85s var(--ec),transform .85s var(--ec); }
+  .fade-left.in { opacity:1; transform:translateX(0); }
+  .fade-right { opacity:0; transform:translateX(42px);  transition:opacity .85s var(--ec),transform .85s var(--ec); }
+  .fade-right.in{ opacity:1; transform:translateX(0); }
+  .fade-up.d1 { transition-delay:.12s; } .fade-up.d2 { transition-delay:.25s; } .fade-up.d3 { transition-delay:.40s; }
+  .fade-up.d4 { transition-delay:.55s; } .fade-up.d5 { transition-delay:.70s; }
+  .fade-left.d1 { transition-delay:.14s; } .fade-right.d1 { transition-delay:.28s; }
+
+  /* ============================================================
+     SECTION HELPERS
+  ============================================================ */
+  .section-label { font-size:.6rem; font-weight:600; letter-spacing:.4em; text-transform:uppercase; color:var(--aa); display:flex; align-items:center; gap:12px; }
+  .section-label::before { content:''; width:22px; height:1px; background:var(--aa); }
+  .section-rule { width:100%; height:1px; background:linear-gradient(to right,transparent,var(--border-g),transparent); margin:22px 0; }
+
+  /* ============================================================
+     ABOUT
+  ============================================================ */
+  #about { padding:130px 56px; background:var(--bg-card); position:relative; overflow:hidden; }
+  .about-bg-word { position:absolute; font-family:var(--serif); font-size:clamp(10rem,22vw,22rem); font-weight:800; color:transparent; -webkit-text-stroke:1px rgba(212,175,55,.05); top:50%; left:50%; transform:translate(-50%,-50%); white-space:nowrap; pointer-events:none; user-select:none; z-index:0; }
+  .about-grid { max-width:1340px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:88px; align-items:center; position:relative; z-index:1; }
+  .about-img-wrap { position:relative; perspective:800px; }
+  .about-img-main { width:100%; height:520px; object-fit:cover; border-radius:var(--r); filter:saturate(1.2) brightness(.88); transition:transform .6s var(--ec); }
+  .about-img-float { position:absolute; width:46%; bottom:-32px; right:-32px; aspect-ratio:1; object-fit:cover; border:4px solid var(--bg-card); border-radius:var(--r); filter:saturate(1.1); transition:transform .6s var(--ec); }
+  .about-img-wrap:hover .about-img-main { transform:scale(1.02); }
+  .about-img-wrap:hover .about-img-float { transform:scale(1.04) translate(-4px,-4px); }
+  .about-accent-bar { position:absolute; top:32px; left:-16px; width:4px; height:88px; background:linear-gradient(to bottom,var(--aa),var(--ab)); border-radius:2px; }
+  .about-h  { font-family:var(--serif); font-size:clamp(2.8rem,4.5vw,5rem); font-weight:700; line-height:1.06; margin:20px 0 24px; }
+  .about-h em { font-style:italic; color:var(--ab); }
+  .about-p  { font-size:.87rem; color:var(--tx-m); line-height:1.88; letter-spacing:.04em; max-width:400px; }
+  .about-stats { display:flex; gap:48px; margin-top:48px; }
+  .stat-v  { font-family:var(--serif); font-size:3rem; font-weight:700; color:var(--ab); line-height:1; }
+  .stat-l  { font-size:.6rem; letter-spacing:.22em; text-transform:uppercase; color:var(--tx-m); margin-top:6px; }
+
+  /* ============================================================
+     MARQUEE 2 (gold)
+  ============================================================ */
+  .marquee2-section { padding:13px 0; overflow:hidden; background:linear-gradient(90deg,rgba(212,175,55,.05),rgba(212,175,55,.02),rgba(212,175,55,.05)); border-top:1px solid var(--border-g); border-bottom:1px solid var(--border-g); }
+  .marquee2-track { display:flex; animation:marqueeRun2 40s linear infinite; white-space:nowrap; }
+  .marquee2-item { font-family:var(--serif); font-size:.95rem; font-weight:600; font-style:italic; color:var(--ab); padding:0 30px; flex-shrink:0; opacity:.65; }
+  @keyframes marqueeRun2 { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+  /* ============================================================
+     THALI SPECIALS — with 3D tilt
+  ============================================================ */
+  #thali { padding:100px 56px; max-width:1340px; margin:0 auto; }
+  .thali-section-hdr { text-align:center; margin-bottom:60px; }
+  .thali-grid { display:grid; grid-template-columns:1fr 1fr; gap:28px; }
+  .thali-card {
+    padding:52px 48px; position:relative; overflow:hidden;
+    border-radius:var(--r);
+    transform-style:preserve-3d; transform:perspective(1000px) rotateX(0deg) rotateY(0deg);
+    transition:transform .5s var(--ec), box-shadow .5s;
+    cursor:none;
+  }
+  .thali-card.veg-card    { background:linear-gradient(135deg, #0f1f0f 0%, #0a150a 100%); border:1px solid rgba(76,175,80,.18); }
+  .thali-card.nonveg-card { background:linear-gradient(135deg, #1f0f0a 0%, #150a06 100%); border:1px solid rgba(255,69,0,.18); }
+  [data-theme="light"] .thali-card.veg-card    { background:linear-gradient(135deg,#e8f5e8,#d4edda); border-color:rgba(76,175,80,.28); }
+  [data-theme="light"] .thali-card.nonveg-card { background:linear-gradient(135deg,#fdf0ec,#f9e0d8); border-color:rgba(255,69,0,.25); }
+  .thali-card:hover { box-shadow:0 30px 80px rgba(0,0,0,.5), 0 0 60px rgba(212,175,55,.06); }
+  .thali-glow { position:absolute; width:320px; height:320px; border-radius:50%; top:-120px; right:-120px; pointer-events:none; }
+  .thali-card.veg-card    .thali-glow { background:radial-gradient(circle,rgba(76,175,80,.1),transparent 70%); }
+  .thali-card.nonveg-card .thali-glow { background:radial-gradient(circle,rgba(255,69,0,.1),transparent 70%); }
+  .thali-icon  { font-size:2.6rem; margin-bottom:18px; display:block; }
+  .thali-badge { display:inline-block; font-size:.56rem; letter-spacing:.24em; text-transform:uppercase; font-weight:700; padding:5px 14px; margin-bottom:18px; border-radius:1px; }
+  .veg-card    .thali-badge { background:rgba(76,175,80,.12); color:#4CAF50; border:1px solid rgba(76,175,80,.28); }
+  .nonveg-card .thali-badge { background:rgba(255,69,0,.08); color:var(--aa);  border:1px solid rgba(255,69,0,.26); }
+  .thali-title { font-family:var(--serif); font-size:2.5rem; font-weight:700; margin-bottom:14px; }
+  .thali-desc  { font-size:.83rem; color:var(--tx-m); line-height:1.75; letter-spacing:.03em; }
+  .thali-note  { font-size:.68rem; color:var(--tx-f); margin-top:20px; font-style:italic; }
+
+  /* ============================================================
+     MENU
+  ============================================================ */
+  #menu { padding:110px 0 0; background:var(--bg); }
+  .menu-hdr { max-width:1340px; margin:0 auto; padding:0 56px 60px; display:flex; align-items:flex-end; justify-content:space-between; gap:24px; }
+  .menu-h { font-family:var(--serif); font-size:clamp(2.5rem,4vw,4.5rem); font-weight:700; line-height:1; }
+
+  /* Tabs */
+  .menu-tabs-wrap { position:sticky; top:0; z-index:100; background:rgba(10,10,10,.95); backdrop-filter:blur(14px); border-bottom:1px solid var(--border); transition:background .4s; }
+  .menu-tabs { display:flex; gap:0; overflow-x:auto; max-width:1340px; margin:0 auto; padding:0 56px; scrollbar-width:none; }
+  .menu-tabs::-webkit-scrollbar { display:none; }
+  .tab-btn {
+    font-size:.61rem; font-weight:600; letter-spacing:.15em; text-transform:uppercase;
+    padding:17px 20px; color:var(--tx-m); white-space:nowrap; flex-shrink:0;
+    border-bottom:2px solid transparent; transition:color .3s, border-color .3s;
+    position:relative;
+  }
+  .tab-btn::before { content:attr(data-icon); margin-right:6px; font-size:.7rem; }
+  .tab-btn.active           { color:var(--tx); border-bottom-color:var(--aa); }
+  .tab-btn.veg-tab.active   { border-bottom-color:#4CAF50; color:#4CAF50; }
+  .tab-btn.nonveg-tab.active{ border-bottom-color:var(--aa); color:var(--aa); }
+  .tab-btn.both-tab.active  { border-bottom-color:var(--ab); color:var(--ab); }
+
+  .menu-content { max-width:1340px; margin:0 auto; padding:0 56px 60px; }
+  .menu-panel { display:none; }
+  .menu-panel.active { display:block; }
+
+  .panel-head { padding:52px 0 36px; display:flex; align-items:flex-end; gap:24px; border-bottom:1px solid var(--border); margin-bottom:0; }
+  .panel-num  { font-family:var(--serif); font-size:clamp(5rem,10vw,9rem); font-weight:800; line-height:1; color:transparent; -webkit-text-stroke:1px rgba(255,255,255,.06); flex-shrink:0; }
+  .panel-cat-label { font-size:.58rem; letter-spacing:.32em; text-transform:uppercase; margin-bottom:8px; }
+  .panel-cat-label.veg    { color:#4CAF50; }
+  .panel-cat-label.nonveg { color:var(--aa); }
+  .panel-cat-label.both   { color:var(--ab); }
+  .panel-title { font-family:var(--serif); font-size:clamp(2rem,3.5vw,3.5rem); font-weight:700; line-height:1.05; }
+
+  /* Dish grid */
+  .dish-grid { display:grid; grid-template-columns:1fr 1fr; gap:0; }
+  @media(max-width:768px){ .dish-grid{grid-template-columns:1fr;} }
+  .dish-row {
+    display:flex; justify-content:space-between; align-items:center;
+    padding:20px 24px 20px 0; border-bottom:1px solid var(--border);
+    position:relative; overflow:hidden; cursor:none;
+    transform:translateY(28px); opacity:0;
+    transition:transform .55s var(--ec), opacity .55s var(--ec), padding-left .3s var(--ec);
+  }
+  .dish-row.in { transform:translateY(0); opacity:1; }
+  .dish-row::before { content:''; position:absolute; inset:0; background:linear-gradient(to right, rgba(255,69,0,.04), transparent); transform:translateX(-100%); transition:transform .4s var(--ec); }
+  .dish-row:hover::before { transform:translateX(0); }
+  .dish-row:hover { padding-left:14px; }
+  .d-name  { font-family:var(--serif); font-size:1.08rem; font-weight:600; color:var(--tx); transition:color .3s; }
+  .dish-row:hover .d-name { color:var(--ab); }
+  .d-right { display:flex; align-items:center; gap:16px; flex-shrink:0; }
+  .d-price { font-size:.84rem; font-weight:700; color:var(--aa); letter-spacing:.04em; }
+  .d-price-half { font-size:.72rem; color:var(--tx-m); }
+  .price-group { text-align:right; }
+  .price-label { font-size:.54rem; letter-spacing:.12em; text-transform:uppercase; color:var(--tx-f); }
+
+  /* Veg / Non-Veg dots */
+  .d-veg-dot { width:9px; height:9px; border-radius:50%; flex-shrink:0; border:1.5px solid transparent; }
+  .d-veg-dot.veg    { background:#4CAF50; border-color:rgba(76,175,80,.4);  box-shadow:0 0 7px rgba(76,175,80,.55); }
+  .d-veg-dot.nonveg { background:#FF4500; border-color:rgba(255,69,0,.35); box-shadow:0 0 7px rgba(255,69,0,.5); }
+
+  /* View Full Menu button */
+  .menu-pdf-wrap { max-width:1340px; margin:0 auto; padding:40px 56px 100px; display:flex; justify-content:center; }
+  .btn-full-menu {
+    display:inline-flex; align-items:center; gap:14px;
+    padding:18px 48px;
+    border:1.5px solid var(--border-g);
+    font-size:.68rem; font-weight:700; letter-spacing:.24em; text-transform:uppercase;
+    color:var(--ab);
+    clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);
+    transition:background .3s, box-shadow .3s, transform .3s var(--es);
+    position:relative; overflow:hidden;
+  }
+  .btn-full-menu::before { content:''; position:absolute; inset:0; background:var(--ab-dim); transform:translateY(100%); transition:transform .4s var(--ec); }
+  .btn-full-menu:hover { background:transparent; box-shadow:0 10px 40px var(--ab-glow); transform:translateY(-3px); }
+  .btn-full-menu:hover::before { transform:translateY(0); }
+  .btn-full-menu span { position:relative; z-index:1; }
+  .menu-pdf-note { font-size:.6rem; color:var(--tx-f); margin-top:10px; text-align:center; letter-spacing:.1em; }
+
+  /* ============================================================
+     SIGNATURE STRIP — 3D tilt cards
+  ============================================================ */
+  #sigs { padding:110px 0; overflow:hidden; background:var(--bg-card); position:relative; }
+  .sigs-hdr { max-width:1340px; margin:0 auto; padding:0 56px 52px; display:flex; justify-content:space-between; align-items:flex-end; }
+  .sigs-track-wrap { overflow:hidden; }
+  .sigs-track { display:flex; gap:24px; animation:sigsRun 36s linear infinite; }
+  .sigs-track:hover { animation-play-state:paused; }
+  @keyframes sigsRun { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+  .sig-card {
+    flex-shrink:0; width:320px; background:var(--bg-elev);
+    border:1px solid var(--border); position:relative; overflow:hidden; border-radius:var(--r);
+    transform-style:preserve-3d; transition:transform .4s var(--es), box-shadow .4s;
+  }
+  .sig-card:hover { box-shadow:0 24px 64px rgba(0,0,0,.6),0 0 40px rgba(255,69,0,.08); }
+  .sig-img  { width:100%; height:200px; object-fit:cover; filter:saturate(1.2); transition:transform .6s var(--ec); }
+  .sig-card:hover .sig-img { transform:scale(1.06); }
+  .sig-info { padding:20px 22px; }
+  .sig-name { font-family:var(--serif); font-size:1.2rem; font-weight:700; }
+  .sig-cat  { font-size:.58rem; letter-spacing:.18em; text-transform:uppercase; color:var(--tx-m); margin-top:4px; }
+  .sig-price{ position:absolute; top:16px; right:16px; background:var(--aa); color:#fff; font-size:.68rem; font-weight:700; padding:5px 12px; letter-spacing:.06em; }
+  .sig-badge{ position:absolute; top:16px; left:16px; font-size:.56rem; letter-spacing:.1em; text-transform:uppercase; padding:4px 10px; font-weight:600; }
+  .sig-badge.veg    { background:rgba(76,175,80,.15);  color:#4CAF50; border:1px solid rgba(76,175,80,.3); }
+  .sig-badge.nonveg { background:rgba(255,69,0,.12);   color:var(--aa); border:1px solid rgba(255,69,0,.24); }
+
+  /* ============================================================
+     EXPERIENCE COUNTER STRIP
+  ============================================================ */
+  #exp-strip { background:var(--bg); padding:80px 56px; }
+  .exp-inner { max-width:1340px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); gap:0; border:1px solid var(--border-g); }
+  .exp-item { padding:44px 36px; border-right:1px solid var(--border-g); text-align:center; position:relative; overflow:hidden; }
+  .exp-item:last-child { border-right:none; }
+  .exp-item::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at center, var(--ab-dim) 0%, transparent 70%); opacity:0; transition:opacity .4s; }
+  .exp-item:hover::before { opacity:1; }
+  .exp-val { font-family:var(--serif); font-size:3.5rem; font-weight:800; color:var(--ab); line-height:1; }
+  .exp-label { font-size:.6rem; letter-spacing:.26em; text-transform:uppercase; color:var(--tx-m); margin-top:8px; }
+
+  /* ============================================================
+     FOOTER
+  ============================================================ */
+  #footer { background:var(--bg-card); padding:100px 0 0; position:relative; overflow:hidden; }
+
+  /* Decorative orbs */
+  .footer-orb1 { position:absolute; width:600px; height:600px; border-radius:50%; top:-280px; left:-220px; background:radial-gradient(circle,rgba(255,69,0,.04),transparent 65%); pointer-events:none; }
+  .footer-orb2 { position:absolute; width:400px; height:400px; border-radius:50%; bottom:-180px; right:-140px; background:radial-gradient(circle,rgba(212,175,55,.05),transparent 65%); pointer-events:none; }
+
+  /* Top gold rule */
+  .footer-top-rule { height:1px; background:linear-gradient(to right,transparent,var(--ab),transparent); max-width:1340px; margin:0 auto 80px; }
+
+  .footer-grid { max-width:1340px; margin:0 auto; padding:0 56px; display:grid; grid-template-columns:1.1fr 1fr; gap:88px; }
+
+  /* Map */
+  .footer-map { border-radius:var(--r); overflow:hidden; height:460px; position:relative; border:1px solid var(--border-g); }
+  .footer-map iframe { width:100%; height:100%; border:none; filter:invert(88%) hue-rotate(180deg) saturate(.6) brightness(.78); opacity:.92; }
+  [data-theme="light"] .footer-map iframe { filter:none; }
+  .map-pin { position:absolute; bottom:20px; left:20px; right:20px; background:rgba(10,10,10,.88); backdrop-filter:blur(10px); padding:18px 22px; border-left:3px solid var(--aa); border-radius:0 var(--r) var(--r) 0; }
+  .map-pin-name  { font-family:var(--serif); font-size:1.1rem; font-weight:700; color:#fff; }
+  .map-pin-addr  { font-size:.67rem; color:rgba(244,239,230,.62); margin-top:5px; line-height:1.55; }
+  .map-pin-phone { font-size:.7rem; color:var(--ab); margin-top:8px; letter-spacing:.05em; }
+  .map-directions {
+    display:inline-flex; align-items:center; gap:8px; margin-top:12px;
+    font-size:.58rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--aa); border-bottom:1px solid rgba(255,69,0,.3); padding-bottom:1px;
+    transition:color .3s, border-color .3s;
+  }
+  .map-directions:hover { color:var(--ab); border-color:var(--ab); }
+
+  /* Info side */
+  .footer-info {}
+  .footer-tagline { font-family:var(--serif); font-size:clamp(2.2rem,3.5vw,3.8rem); font-weight:700; line-height:1.1; margin-bottom:20px; }
+  .footer-tagline em { color:var(--ab); font-style:italic; }
+  .footer-body { font-size:.85rem; color:var(--tx-m); line-height:1.82; max-width:420px; margin-bottom:36px; }
+
+  .hours-box { border:1px solid var(--border-g); padding:24px 26px; position:relative; margin-bottom:36px; border-radius:var(--r); }
+  .hours-box::before { content:'HOURS'; position:absolute; top:-8px; left:16px; font-size:.54rem; letter-spacing:.32em; color:var(--ab); background:var(--bg-card); padding:0 8px; }
+  .hours-row { display:flex; justify-content:space-between; padding:8px 0; font-size:.76rem; border-bottom:1px solid var(--border); color:var(--tx-m); }
+  .hours-row:last-child { border-bottom:none; }
+  .hours-row b { color:var(--tx); font-weight:500; }
+
+  /* CTA stack */
+  .cta-stack { display:flex; flex-direction:column; gap:14px; }
+  .btn-call {
+    display:flex; align-items:center; justify-content:center; gap:12px;
+    padding:20px 28px; background:var(--aa); color:#fff;
+    font-size:.72rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase;
+    clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);
+    transition:transform .3s var(--es), box-shadow .3s; position:relative; overflow:hidden;
+  }
+  .btn-call::after { content:''; position:absolute; inset:0; background:linear-gradient(135deg,rgba(255,255,255,.1),transparent); opacity:0; transition:opacity .3s; }
+  .btn-call:hover { transform:translateY(-3px); box-shadow:0 16px 48px rgba(255,69,0,.45); }
+  .btn-call:hover::after { opacity:1; }
+  .btn-wa {
+    display:flex; align-items:center; justify-content:center; gap:12px;
+    padding:18px 28px; background:transparent; color:var(--tx);
+    font-size:.72rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase;
+    border:1.5px solid var(--border);
+    clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);
+    transition:transform .3s var(--es), border-color .3s, box-shadow .3s; position:relative; overflow:hidden;
+  }
+  .btn-wa::before { content:''; position:absolute; inset:0; background:rgba(37,211,102,.06); transform:translateY(100%); transition:transform .4s var(--ec); }
+  .btn-wa:hover { border-color:#25D366; transform:translateY(-3px); box-shadow:0 16px 48px rgba(37,211,102,.15); }
+  .btn-wa:hover::before { transform:translateY(0); }
+  .btn-icon { width:17px; height:17px; flex-shrink:0; }
+  .wa-green { fill:#25D366; }
+
+  /* Footer strip */
+  .footer-strip { margin-top:80px; border-top:1px solid var(--border); }
+  .footer-strip-inner { max-width:1340px; margin:0 auto; padding:28px 56px; display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:24px; }
+
+  .f-logo { font-family:var(--serif); font-size:.92rem; font-weight:700; letter-spacing:.26em; text-transform:uppercase; }
+  .f-logo b { color:var(--ab); }
+
+  .f-center { text-align:center; }
+  .f-copy    { font-size:.58rem; color:var(--tx-f); letter-spacing:.1em; line-height:1.7; }
+  .f-dev     { font-size:.56rem; color:var(--tx-f); letter-spacing:.14em; margin-top:6px; }
+  .f-dev span { color:var(--ab); font-weight:600; }
+
+  .f-right { display:flex; justify-content:flex-end; }
+  /* Only Instagram icon */
+  .f-soc {
+    width:38px; height:38px; border:1px solid var(--border-g); border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    color:var(--tx-m); transition:border-color .3s,background .3s,transform .3s var(--es), color .3s;
+  }
+  .f-soc:hover { border-color:var(--ab); background:var(--ab-dim); transform:translateY(-3px); color:var(--ab); }
+  .f-soc svg { width:15px; height:15px; }
+
+  /* ============================================================
+     MAGNETIC
+  ============================================================ */
+  .magnetic { display:inline-block; }
+
+  /* ============================================================
+     RESPONSIVE
+  ============================================================ */
+  @media(max-width:1024px) {
+    #nav { padding:20px 28px; }
+    #nav.scrolled { padding:14px 28px; }
+    #about { padding:80px 28px; }
+    .about-grid { grid-template-columns:1fr; gap:52px; }
+    .about-img-float { display:none; }
+    .menu-hdr,.menu-content { padding-left:28px; padding-right:28px; }
+    .menu-tabs { padding:0 28px; }
+    .menu-pdf-wrap { padding:40px 28px 80px; }
+    .sigs-hdr { padding:0 28px 40px; }
+    #thali { padding:80px 28px; }
+    .thali-grid { grid-template-columns:1fr; }
+    .footer-grid { grid-template-columns:1fr; gap:52px; padding:0 28px; }
+    .footer-map { height:300px; }
+    .footer-strip-inner { padding:24px 28px; grid-template-columns:1fr; text-align:center; }
+    .f-right { justify-content:center; }
+    #exp-strip { padding:60px 28px; }
+    .exp-inner { grid-template-columns:repeat(2,1fr); }
+    .exp-item { border-bottom:1px solid var(--border-g); }
+    .exp-item:nth-child(2) { border-right:none; }
+    .nav-links { display:none; }
+  }
+  @media(max-width:600px) {
+    .hero-cta-row { flex-direction:column; align-items:center; }
+    .exp-inner { grid-template-columns:1fr; }
+    .exp-item { border-right:none; }
+    .sigs-hdr { flex-direction:column; align-items:flex-start; gap:12px; }
+  }
+
+  /* ============================================================
+     PRELOADER
+  ============================================================ */
+  #preloader {
+    position:fixed; inset:0; z-index:99999;
+    background:var(--bg); display:flex; flex-direction:column; align-items:center; justify-content:center;
+    transition:opacity .7s var(--ec), visibility .7s;
+  }
+  #preloader.hidden { opacity:0; visibility:hidden; pointer-events:none; }
+  .pl-logo { font-family:var(--serif); font-size:clamp(2.2rem,6vw,4rem); font-weight:800; letter-spacing:.28em; text-transform:uppercase; color:var(--tx); overflow:hidden; }
+  .pl-logo b { color:var(--ab); }
+  .pl-bar-wrap { width:160px; height:1px; background:rgba(255,255,255,.08); margin-top:32px; position:relative; overflow:hidden; }
+  .pl-bar { position:absolute; left:0; top:0; height:100%; width:0; background:linear-gradient(to right,var(--aa),var(--ab)); animation:plFill 1.4s var(--ec) forwards; }
+  @keyframes plFill { to{ width:100%; } }
+  .pl-tag { font-size:.58rem; letter-spacing:.4em; text-transform:uppercase; color:var(--tx-f); margin-top:18px; }
+
+  /* ============================================================
+     SCROLL PROGRESS BAR
+  ============================================================ */
+  #scroll-progress {
+    position:fixed; top:0; left:0; height:2px; width:0%;
+    background:linear-gradient(to right,var(--aa),var(--ab));
+    z-index:10001; transition:width .1s linear;
+    box-shadow:0 0 8px rgba(212,175,55,.5);
+  }
+
+  /* ============================================================
+     MOBILE HAMBURGER
+  ============================================================ */
+  #hamburger {
+    display:none; flex-direction:column; gap:5px; padding:8px;
+    border:1px solid var(--border-g); border-radius:var(--r);
+    background:transparent; transition:background .3s;
+  }
+  #hamburger:hover { background:var(--ab-dim); }
+  #hamburger span { display:block; width:22px; height:1.5px; background:var(--tx); border-radius:2px; transition:transform .35s var(--es), opacity .3s; }
+  body.menu-open #hamburger span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+  body.menu-open #hamburger span:nth-child(2) { opacity:0; }
+  body.menu-open #hamburger span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
+
+  /* Mobile nav drawer */
+  #mobile-nav {
+    display:none; position:fixed; inset:0; z-index:990;
+    background:rgba(10,10,10,.96); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
+    flex-direction:column; align-items:center; justify-content:center; gap:36px;
+    opacity:0; transition:opacity .4s var(--ec);
+  }
+  body.menu-open #mobile-nav { opacity:1; }
+  #mobile-nav a { font-family:var(--serif); font-size:clamp(2rem,7vw,3rem); font-weight:700; color:var(--tx-m); letter-spacing:.08em; transition:color .3s; }
+  #mobile-nav a:hover { color:var(--ab); }
+  .mobile-nav-sub { font-size:.6rem; letter-spacing:.3em; text-transform:uppercase; color:var(--tx-f); margin-top:-20px; }
+  [data-theme="light"] #mobile-nav { background:rgba(250,247,240,.97); }
+
+  @media(max-width:1024px){
+    #hamburger { display:flex; }
+    #mobile-nav { display:flex; pointer-events:none; }
+    body.menu-open #mobile-nav { pointer-events:all; }
+  }
+
+  /* ============================================================
+     WHY US STRIP
+  ============================================================ */
+  #why-us { padding:90px 56px; background:var(--bg); }
+  .why-inner { max-width:1340px; margin:0 auto; }
+  .why-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--border-g); border:1px solid var(--border-g); margin-top:52px; }
+  .why-card { background:var(--bg); padding:44px 32px; position:relative; overflow:hidden; transition:background .35s; }
+  .why-card::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at bottom left, var(--ab-dim) 0%,transparent 65%); opacity:0; transition:opacity .4s; }
+  .why-card:hover { background:var(--bg-card); }
+  .why-card:hover::before { opacity:1; }
+  .why-num  { font-family:var(--serif); font-size:.7rem; font-weight:700; color:var(--aa); letter-spacing:.28em; margin-bottom:20px; }
+  .why-icon { font-size:1.8rem; margin-bottom:16px; display:block; }
+  .why-title{ font-family:var(--serif); font-size:1.35rem; font-weight:700; margin-bottom:10px; }
+  .why-desc { font-size:.78rem; color:var(--tx-m); line-height:1.75; letter-spacing:.03em; }
+  @media(max-width:1024px){ .why-grid{grid-template-columns:repeat(2,1fr);} #why-us{padding:70px 28px;} }
+  @media(max-width:600px)  { .why-grid{grid-template-columns:1fr;} }
+
+  /* ============================================================
+     GALLERY
+  ============================================================ */
+  #gallery { padding:100px 56px; background:var(--bg-card); overflow:hidden; }
+  .gallery-inner { max-width:1340px; margin:0 auto; }
+  .gallery-hdr   { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:52px; }
+  .gallery-grid  {
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    grid-template-rows:240px 240px;
+    gap:14px;
+  }
+  .g-item { overflow:hidden; position:relative; border-radius:var(--r); }
+  .g-item img { width:100%; height:100%; object-fit:cover; filter:saturate(1.1) brightness(.88); transition:transform .7s var(--ec),filter .5s; }
+  .g-item:hover img { transform:scale(1.07); filter:saturate(1.3) brightness(.96); }
+  .g-item::after { content:''; position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,.45),transparent 50%); opacity:0; transition:opacity .4s; }
+  .g-item:hover::after { opacity:1; }
+  .g-label { position:absolute; bottom:16px; left:18px; font-family:var(--serif); font-size:1rem; font-weight:700; color:#fff; z-index:2; opacity:0; transform:translateY(6px); transition:opacity .4s,transform .4s; }
+  .g-item:hover .g-label { opacity:1; transform:translateY(0); }
+
+  /* Grid layout spans */
+  .g-item:nth-child(1) { grid-column:span 4; grid-row:span 2; }
+  .g-item:nth-child(2) { grid-column:span 5; grid-row:span 1; }
+  .g-item:nth-child(3) { grid-column:span 3; grid-row:span 1; }
+  .g-item:nth-child(4) { grid-column:span 3; grid-row:span 1; }
+  .g-item:nth-child(5) { grid-column:span 5; grid-row:span 1; }
+
+  @media(max-width:1024px){
+    #gallery { padding:70px 28px; }
+    .gallery-grid { grid-template-columns:1fr 1fr; grid-template-rows:auto; }
+    .g-item { grid-column:span 1 !important; grid-row:span 1 !important; height:200px; }
+    .gallery-hdr { flex-direction:column; align-items:flex-start; gap:16px; }
+  }
+  @media(max-width:600px){
+    .gallery-grid { grid-template-columns:1fr; }
+    .g-item { height:180px; }
+  }
+
+  /* ============================================================
+     TESTIMONIALS
+  ============================================================ */
+  #reviews { padding:100px 56px; background:var(--bg); }
+  .reviews-inner { max-width:1340px; margin:0 auto; }
+  .reviews-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:52px; }
+  .review-card {
+    background:var(--bg-card); border:1px solid var(--border-g);
+    padding:38px 34px; border-radius:var(--r); position:relative; overflow:hidden;
+    transition:transform .4s var(--es), box-shadow .4s;
+  }
+  .review-card::before { content:''; position:absolute; top:0; left:0; width:100%; height:2px; background:linear-gradient(to right,var(--aa),var(--ab)); transform:scaleX(0); transform-origin:left; transition:transform .5s var(--ec); }
+  .review-card:hover { transform:translateY(-6px); box-shadow:0 20px 60px rgba(0,0,0,.35); }
+  .review-card:hover::before { transform:scaleX(1); }
+  .review-stars { display:flex; gap:4px; margin-bottom:20px; }
+  .review-stars span { color:var(--ab); font-size:.9rem; }
+  .review-text { font-family:var(--serif); font-size:1.08rem; font-weight:400; line-height:1.7; color:var(--tx); margin-bottom:24px; font-style:italic; }
+  .review-text::before { content:'\201C'; font-size:2.5rem; color:var(--ab); opacity:.35; line-height:.4; display:block; margin-bottom:8px; }
+  .review-author { display:flex; align-items:center; gap:14px; }
+  .review-av { width:44px; height:44px; border-radius:50%; object-fit:cover; filter:saturate(1.1); border:2px solid var(--border-g); }
+  .review-name { font-size:.78rem; font-weight:700; letter-spacing:.05em; }
+  .review-loc  { font-size:.62rem; color:var(--tx-m); margin-top:2px; letter-spacing:.06em; }
+  .review-src  { font-size:.56rem; color:var(--tx-f); letter-spacing:.12em; text-transform:uppercase; margin-top:3px; }
+  @media(max-width:1024px){ .reviews-grid{grid-template-columns:1fr 1fr;} #reviews{padding:70px 28px;} }
+  @media(max-width:600px)  { .reviews-grid{grid-template-columns:1fr;} }
+
+  /* ============================================================
+     FLOATING WHATSAPP + BACK TO TOP
+  ============================================================ */
+  #float-wa {
+    position:fixed; right:28px; bottom:88px; z-index:5000;
+    width:52px; height:52px; border-radius:50%;
+    background:#25D366; box-shadow:0 4px 24px rgba(37,211,102,.45);
+    display:flex; align-items:center; justify-content:center;
+    opacity:0; transform:scale(.7); pointer-events:none;
+    transition:opacity .4s var(--es),transform .4s var(--es),box-shadow .3s;
+  }
+  #float-wa.show { opacity:1; transform:scale(1); pointer-events:all; }
+  #float-wa:hover { box-shadow:0 8px 40px rgba(37,211,102,.6); transform:scale(1.08); }
+  #float-wa svg { width:26px; height:26px; fill:#fff; }
+
+  #back-top {
+    position:fixed; right:28px; bottom:28px; z-index:5000;
+    width:44px; height:44px;
+    border:1.5px solid var(--border-g); border-radius:50%;
+    background:var(--bg-glass); backdrop-filter:blur(10px);
+    display:flex; align-items:center; justify-content:center;
+    opacity:0; transform:translateY(12px); pointer-events:none;
+    transition:opacity .4s var(--es),transform .4s var(--es),border-color .3s,background .3s;
+  }
+  #back-top.show { opacity:1; transform:translateY(0); pointer-events:all; }
+  #back-top:hover { border-color:var(--ab); background:var(--ab-dim); }
+  #back-top svg { width:16px; height:16px; stroke:var(--tx); stroke-width:2; fill:none; }
+
+  /* ============================================================
+     TOAST
+  ============================================================ */
+  #toast {
+    position:fixed; bottom:36px; left:50%; transform:translateX(-50%) translateY(20px);
+    background:var(--bg-elev); border:1px solid var(--border-g);
+    padding:14px 26px; border-radius:var(--r);
+    font-size:.72rem; letter-spacing:.08em; color:var(--tx);
+    z-index:9990; opacity:0; pointer-events:none;
+    transition:opacity .35s, transform .35s var(--es);
+    white-space:nowrap;
+  }
+  #toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+
+  /* ============================================================
+     NOSCRIPT
+  ============================================================ */
+  noscript .noscript-bar {
+    background:var(--aa); color:#fff; text-align:center;
+    padding:12px 24px; font-size:.78rem; letter-spacing:.08em;
+  }
+
+  /* ============================================================
+     SKIP LINK (accessibility)
+  ============================================================ */
+  .skip-link {
+    position:fixed; top:-100px; left:20px; z-index:99999;
+    background:var(--aa); color:#fff; padding:10px 20px;
+    font-size:.75rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+    border-radius:0 0 var(--r) var(--r);
+    transition:top .2s;
+  }
+  .skip-link:focus { top:0; }
+
+  /* ============================================================
+     COOKIE BANNER
+  ============================================================ */
+  #cookie-banner {
+    position:fixed; bottom:0; left:0; right:0; z-index:8000;
+    background:var(--bg-elev); border-top:1px solid var(--border-g);
+    padding:16px 40px; display:flex; align-items:center; justify-content:space-between; gap:20px;
+    transform:translateY(100%); transition:transform .5s var(--es);
+    backdrop-filter:blur(12px);
+  }
+  #cookie-banner.show { transform:translateY(0); }
+  .cookie-text { font-size:.72rem; color:var(--tx-m); letter-spacing:.04em; max-width:600px; line-height:1.6; }
+  .cookie-text a { color:var(--ab); text-decoration:underline; }
+  .cookie-accept {
+    flex-shrink:0; font-size:.65rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase;
+    padding:11px 24px; background:var(--aa); color:#fff;
+    clip-path:polygon(6px 0%,100% 0%,calc(100% - 6px) 100%,0% 100%);
+    transition:transform .3s var(--es), box-shadow .3s;
+    white-space:nowrap;
+  }
+  .cookie-accept:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(255,69,0,.4); }
+  @media(max-width:600px){ #cookie-banner{flex-direction:column;padding:16px 20px;} }
+
+  /* ============================================================
+     PRINT STYLES
+  ============================================================ */
+  @media print {
+    #preloader,#grain,#c-dot,#c-ring,#dish-preview,#nav,
+    .marquee-section,.marquee2-section,#hero-canvas,.sparks,
+    .hero-scroll,#float-wa,#back-top,#toast,#cookie-banner,
+    #scroll-progress,#mobile-nav,#gallery,#why-us,#exp-strip { display:none !important; }
+    body { background:#fff; color:#000; cursor:auto; }
+    #hero { height:auto; min-height:0; padding:40px 20px; }
+    .hero-title { font-size:3rem; color:#000 !important; text-shadow:none !important; }
+    .hero-veil,.hero-veil2,.hero-bg-img { display:none; }
+    a { color:#000; }
+    .dish-row { border-bottom:1px solid #ddd; opacity:1; transform:none; }
+    .menu-tabs-wrap { position:static; }
+    .menu-panel { display:block !important; }
+    #footer { background:#fff; color:#000; }
+    .footer-map { display:none; }
+  }
+
+  /* ============================================================
+     SELECTION COLOR
+  ============================================================ */
+  ::selection { background:rgba(212,175,55,.3); color:var(--tx); }
+  ::-moz-selection { background:rgba(212,175,55,.3); color:var(--tx); }
+
+  /* ============================================================
+     FOCUS VISIBLE (keyboard nav)
+  ============================================================ */
+  :focus-visible { outline:2px solid var(--ab); outline-offset:3px; border-radius:2px; }
+  button:focus-visible, a:focus-visible { outline:2px solid var(--ab); }
+  </style>
+</head>
+<body>
+
+<a href="#menu" class="skip-link">Skip to Menu</a>
+
+<noscript><div class="noscript-bar">Please enable JavaScript to use all features of this website.</div></noscript>
+
+<!-- Cookie consent -->
+<div id="cookie-banner" role="region" aria-label="Cookie consent">
+  <p class="cookie-text">We use cookies to improve your experience on this site. By continuing to browse, you agree to our use of cookies. <a href="#footer">Learn more</a>.</p>
+  <button class="cookie-accept" id="cookie-accept">Accept &amp; Continue</button>
+</div>
+
+<!-- Preloader -->
+<div id="preloader" aria-hidden="true">
+  <div class="pl-logo">Rose Friendly</div>
+  <div class="pl-bar-wrap"><div class="pl-bar"></div></div>
+  <div class="pl-tag">Radaur · Yamuna Nagar</div>
+</div>
+
+<!-- Scroll progress -->
+<div id="scroll-progress" aria-hidden="true"></div>
+
+<!-- Mobile nav drawer -->
+<div id="mobile-nav" aria-label="Mobile navigation">
+  <a href="#about"  id="mn-about">Our Story</a>
+  <a href="#menu"   id="mn-menu">Menu</a>
+  <a href="#sigs"   id="mn-sigs">Signatures</a>
+  <a href="#gallery" id="mn-gal">Gallery</a>
+  <a href="#footer" id="mn-find">Find Us</a>
+  <div class="mobile-nav-sub">S.K Road · Radaur · Yamuna Nagar</div>
+</div>
+
+<!-- Grain -->
+<div id="grain" aria-hidden="true"></div>
+
+<!-- Cursor -->
+<div id="c-dot"  aria-hidden="true"></div>
+<div id="c-ring" aria-hidden="true"></div>
+
+<!-- Dish preview -->
+<div id="dish-preview" aria-hidden="true"><img id="dp-img" src="" alt="" /></div>
+
+<!-- ============================================================
+     NAV
+============================================================ -->
+<nav id="nav" aria-label="Main navigation">
+  <div class="nav-logo">
+    <div class="nav-logo-main">Rose Friendly</div>
+    <div class="nav-logo-sub">Radaur · Yamuna Nagar</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about">Our Story</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#sigs">Signatures</a></li>
+    <li><a href="#footer">Find Us</a></li>
+  </ul>
+  <div class="nav-right">
+    <button id="theme-btn" aria-label="Toggle theme" title="Toggle light / dark">🌙</button>
+    <button id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="tel:+918222937052" class="nav-cta magnetic" id="nav-cta">Call Now</a>
+  </div>
+</nav>
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+<section id="hero" aria-label="Hero">
+  <div class="hero-bg-img" aria-hidden="true"></div>
+  <div class="hero-veil"  aria-hidden="true"></div>
+  <div class="hero-veil2" aria-hidden="true"></div>
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <div class="sparks" id="sparks" aria-hidden="true"></div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">Radaur · Yamuna Nagar · Haryana</p>
+    <h1 class="hero-title" id="hero-title" aria-label="Rose Friendly">
+      <span class="word" id="hw1"></span>
+      <br/>
+      <span class="word" id="hw2"></span>
+    </h1>
+    <p class="hero-sub">Veg &amp; Non-Veg &nbsp;·&nbsp; Open 11 AM – 11 PM &nbsp;·&nbsp; Closed Tuesdays</p>
+    <div class="hero-tags">
+      <span class="hero-tag">Indian</span>
+      <span class="hero-tag accent">Tandoori</span>
+      <span class="hero-tag">Indo-Chinese</span>
+      <span class="hero-tag gold">Chaap Specials</span>
+    </div>
+    <div class="hero-cta-row">
+      <a href="#menu" class="hero-btn-primary magnetic">Explore Menu</a>
+      <a href="tel:+918222937052" class="hero-btn-ghost magnetic">Reserve a Table</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <div class="hero-scroll-line"></div>
+    <span class="hero-scroll-lbl">Scroll</span>
+  </div>
+</section>
+
+<!-- ============================================================
+     MARQUEE 1
+============================================================ -->
+<div class="marquee-section" aria-hidden="true">
+  <div class="marquee-track" id="mq1"></div>
+</div>
+
+<!-- ============================================================
+     ABOUT
+============================================================ -->
+<section id="about" aria-label="Our story">
+  <div class="about-bg-word" aria-hidden="true">HARYANA</div>
+  <div class="about-grid">
+    <div class="about-img-wrap fade-left">
+      <div class="about-accent-bar"></div>
+      <img class="about-img-main clip-reveal" src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=700&auto=format&fit=crop&q=65" alt="Indian food preparation" loading="eager" decoding="async" />
+      <img class="about-img-float clip-reveal" src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=380&auto=format&fit=crop&q=60" alt="Butter chicken" loading="eager" decoding="async" style="transition-delay:.2s" />
+    </div>
+    <div class="about-text">
+      <p class="section-label fade-up">Radaur's Finest</p>
+      <div class="section-rule fade-up d1"></div>
+      <h2 class="about-h fade-up d2">Rooted in <em>Fire,</em><br/>Crafted with<br/><em>Soul</em></h2>
+      <p class="about-p fade-up d3">
+        Rose Friendly is Radaur's most beloved dining destination — a kitchen where Haryanvi tradition meets bold Indo-Chinese flair. From overnight slow-cooked Dal Makhani and tandoor-charred Kababs to sizzling wok-fired Noodles and melt-in-your-mouth Chaap, every plate is a labour of love.
+        <br/><br/>
+        Serving the community since day one — breakfast, lunch, and dinner — with the warmth and honesty of a home-style kitchen.
+      </p>
+      <div class="about-stats">
+        <div class="fade-up d3">
+          <div class="stat-v" data-count="100">0</div>
+          <div class="stat-l">Menu Items</div>
+        </div>
+        <div class="fade-up d4">
+          <div class="stat-v" data-count="15">0</div>
+          <div class="stat-l">Years Serving</div>
+        </div>
+        <div class="fade-up d5">
+          <div class="stat-v" data-count="6">0</div>
+          <div class="stat-l">Days a Week</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     MARQUEE 2
+============================================================ -->
+<div class="marquee2-section" aria-hidden="true">
+  <div class="marquee2-track" id="mq2"></div>
+</div>
+
+<!-- ============================================================
+     WHY ROSE FRIENDLY
+============================================================ -->
+<section id="why-us" aria-label="Why choose us">
+  <div class="why-inner">
+    <div>
+      <p class="section-label fade-up">Why We're Different</p>
+      <h2 style="font-family:var(--serif);font-size:clamp(2.2rem,3.5vw,3.8rem);font-weight:700;margin-top:14px;" class="fade-up d1">Four Reasons Radaur<br/><em style="color:var(--ab);font-style:italic;">Keeps Coming Back</em></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card fade-up">
+        <div class="why-num">01</div>
+        <span class="why-icon">🔥</span>
+        <div class="why-title">Real Tandoor, Real Smoke</div>
+        <p class="why-desc">Every kabab and tikka is fired in a traditional clay tandoor — no shortcuts, no ovens. The charcoal aroma you smell before you enter? That's your first course.</p>
+      </div>
+      <div class="why-card fade-up d1">
+        <div class="why-num">02</div>
+        <span class="why-icon">🌿</span>
+        <div class="why-title">Fresh Daily, Never Frozen</div>
+        <p class="why-desc">Produce arrives each morning from local mandis. Dairy is sourced fresh. Dough for rotis and naans is prepared from scratch for every service.</p>
+      </div>
+      <div class="why-card fade-up d2">
+        <div class="why-num">03</div>
+        <span class="why-icon">🥘</span>
+        <div class="why-title">100+ Dishes, One Kitchen</div>
+        <p class="why-desc">From slow-overnight Dal Makhani to sizzling Indo-Chinese wok dishes — our kitchen masters both traditions with equal authority.</p>
+      </div>
+      <div class="why-card fade-up d3">
+        <div class="why-num">04</div>
+        <span class="why-icon">🏡</span>
+        <div class="why-title">Haryana's Warmth, Always</div>
+        <p class="why-desc">No reservations needed. No attitude. Walk in hungry, walk out full — with the kind of hospitality that turns first-timers into regulars for fifteen years.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     EXPERIENCE STRIP
+============================================================ -->
+<section id="exp-strip" aria-label="Stats">
+  <div class="exp-inner">
+    <div class="exp-item fade-up">
+      <div class="exp-val" data-count="100">0</div>
+      <div class="exp-label">Dishes on Menu</div>
+    </div>
+    <div class="exp-item fade-up d1">
+      <div class="exp-val" data-count="15">0</div>
+      <div class="exp-label">Years of Flavour</div>
+    </div>
+    <div class="exp-item fade-up d2">
+      <div class="exp-val" data-count="500">0</div>
+      <div class="exp-label">Happy Guests Daily</div>
+    </div>
+    <div class="exp-item fade-up d3">
+      <div class="exp-val" data-count="6">0</div>
+      <div class="exp-label">Days Open Weekly</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     THALI SPECIALS
+============================================================ -->
+<section aria-label="Thali specials">
+  <div id="thali">
+    <div class="thali-section-hdr fade-up">
+      <p class="section-label" style="justify-content:center;">Chef's Specials</p>
+      <h2 style="font-family:var(--serif);font-size:clamp(2.4rem,4vw,4rem);font-weight:700;margin-top:16px;">The Full <em style="color:var(--ab);font-style:italic;">Experience</em></h2>
+    </div>
+    <div class="thali-grid">
+      <div class="thali-card nonveg-card fade-up tilt-card">
+        <div class="thali-glow"></div>
+        <span class="thali-icon">🍗</span>
+        <div class="thali-badge">Chef's Special</div>
+        <h3 class="thali-title">Non-Veg Thali</h3>
+        <p class="thali-desc">A royal spread featuring our signature Chicken Main Course with dal, rice, roti, raita, and dessert. The complete Rose Friendly experience on one plate.</p>
+        <p class="thali-note">* Price on inquiry · Ask our staff for today's thali</p>
+      </div>
+      <div class="thali-card veg-card fade-up d2 tilt-card">
+        <div class="thali-glow"></div>
+        <span class="thali-icon">🌿</span>
+        <div class="thali-badge">Pure Veg</div>
+        <h3 class="thali-title">Veg Thali</h3>
+        <p class="thali-desc">A wholesome feast with Paneer Mains, seasonal Veg curry, Dal, fresh Roti or Naan, Raita, and a sweet finish. Nourishing, flavourful, complete.</p>
+        <p class="thali-note">* Price on inquiry · Ask our staff for today's thali</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     MENU
+============================================================ -->
+<section id="menu" aria-label="Full menu">
+  <div class="menu-hdr">
+    <div>
+      <p class="section-label fade-up">Complete Menu</p>
+      <h2 class="menu-h fade-up d1">Every Flavour.<br/>Every Craving.</h2>
+    </div>
+    <p style="font-size:.74rem;color:var(--tx-m);letter-spacing:.06em;max-width:280px;line-height:1.75;" class="fade-up d2">
+      100+ dishes spanning Indian classics, Indo-Chinese, Tandoor, Pizza, Chaap, and more.
+    </p>
+  </div>
+
+  <div class="menu-tabs-wrap">
+    <div class="menu-tabs" id="menu-tabs" role="tablist"></div>
+  </div>
+
+  <div class="menu-content" id="menu-panels"></div>
+
+  <!-- View Full Menu -->
+  <div class="menu-pdf-wrap fade-up">
+    <div style="text-align:center;">
+      <!-- REPLACE href="menu.pdf" with your actual PDF path once attached -->
+      <a href="menu.pdf" download class="btn-full-menu magnetic" id="btn-full-menu" aria-label="Download full menu PDF">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        <span>Download Full Menu PDF</span>
+      </a>
+      <p class="menu-pdf-note">Click to download our full menu PDF</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SIGNATURE STRIP
+============================================================ -->
+<section id="sigs" aria-label="Signature dishes">
+  <div class="sigs-hdr">
+    <div>
+      <p class="section-label fade-up">Crowd Favourites</p>
+      <h2 style="font-family:var(--serif);font-size:clamp(2.2rem,3.5vw,3.8rem);font-weight:700;margin-top:12px;" class="fade-up d1">Signature Plates</h2>
+    </div>
+    <p style="font-size:.74rem;color:var(--tx-m);letter-spacing:.05em;max-width:220px;line-height:1.7;" class="fade-up d2">Hover to pause. All-time bestsellers from our kitchen.</p>
+  </div>
+  <div class="sigs-track-wrap">
+    <div class="sigs-track" id="sigs-track"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GALLERY
+============================================================ -->
+<section id="gallery" aria-label="Food gallery">
+  <div class="gallery-inner">
+    <div class="gallery-hdr">
+      <div>
+        <p class="section-label fade-up">Our Kitchen</p>
+        <h2 style="font-family:var(--serif);font-size:clamp(2.2rem,3.5vw,3.8rem);font-weight:700;margin-top:14px;" class="fade-up d1">Plated with <em style="color:var(--ab);font-style:italic;">Passion</em></h2>
+      </div>
+      <p style="font-size:.78rem;color:var(--tx-m);max-width:240px;line-height:1.75;letter-spacing:.04em;" class="fade-up d2">Every dish that leaves our kitchen is crafted to be as beautiful as it is delicious.</p>
+    </div>
+    <div class="gallery-grid fade-up">
+      <div class="g-item"><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=640&auto=format&fit=crop&q=65" alt="Indian feast" loading="lazy"/><span class="g-label">Indian Feast</span></div>
+      <div class="g-item"><img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=560&auto=format&fit=crop&q=65" alt="Butter Chicken" loading="lazy"/><span class="g-label">Butter Chicken</span></div>
+      <div class="g-item"><img src="https://images.unsplash.com/photo-1567337710282-00832b415979?w=480&auto=format&fit=crop&q=65" alt="Veg Starters" loading="lazy"/><span class="g-label">Veg Starters</span></div>
+      <div class="g-item"><img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=480&auto=format&fit=crop&q=65" alt="Chicken Tikka" loading="lazy"/><span class="g-label">Chicken Tikka</span></div>
+      <div class="g-item"><img src="https://images.unsplash.com/photo-1645696301019-35adcc18cfe3?w=560&auto=format&fit=crop&q=65" alt="Dal Makhani" loading="lazy"/><span class="g-label">Dal Makhani</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIALS
+============================================================ -->
+<section id="reviews" aria-label="Customer reviews">
+  <div class="reviews-inner">
+    <p class="section-label fade-up">Diner Stories</p>
+    <h2 style="font-family:var(--serif);font-size:clamp(2.2rem,3.5vw,3.8rem);font-weight:700;margin-top:14px;" class="fade-up d1">Loved by <em style="color:var(--ab);font-style:italic;">Radaur</em></h2>
+    <div class="reviews-grid">
+      <div class="review-card fade-up">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">The Butter Chicken here is genuinely the best I've had outside of a proper dhaba in Chandigarh. The gravy has that slow-cooked depth you just can't fake. We drive 25 km every weekend now.</p>
+        <div class="review-author">
+          <img class="review-av" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&auto=format&fit=crop&q=60" alt="Rahul" loading="lazy"/>
+          <div>
+            <div class="review-name">Rahul Sharma</div>
+            <div class="review-loc">Yamuna Nagar</div>
+            <div class="review-src">Regular Guest</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card fade-up d1">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">Ordered the Malai Chaap and Paneer Tikka for a family gathering. Both were outstanding — tender, perfectly spiced, with that unmistakable tandoor char. Rose Friendly never disappoints.</p>
+        <div class="review-author">
+          <img class="review-av" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&auto=format&fit=crop&q=60" alt="Priya" loading="lazy"/>
+          <div>
+            <div class="review-name">Priya Verma</div>
+            <div class="review-loc">Radaur</div>
+            <div class="review-src">Regular Guest</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card fade-up d2">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">Been coming here for over 8 years. The Dal Makhani on weekend mornings is a ritual now. Affordable, honest food with portions that actually fill you. This is what a neighbourhood restaurant should be.</p>
+        <div class="review-author">
+          <img class="review-av" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&auto=format&fit=crop&q=60" alt="Mandeep" loading="lazy"/>
+          <div>
+            <div class="review-name">Mandeep Singh</div>
+            <div class="review-loc">Radaur</div>
+            <div class="review-src">Regular Guest</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer id="footer" aria-label="Contact and location">
+  <div class="footer-orb1" aria-hidden="true"></div>
+  <div class="footer-orb2" aria-hidden="true"></div>
+  <div class="footer-top-rule" aria-hidden="true"></div>
+
+  <div class="footer-grid">
+    <!-- Map — real address -->
+    <div class="footer-map fade-left">
+      <iframe
+        src="https://maps.google.com/maps?q=SK+Road+Radaur+Yamuna+Nagar+Haryana+India&output=embed&z=15"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="Rose Friendly — S.K Road, Radaur, Yamuna Nagar">
+      </iframe>
+      <div class="map-pin">
+        <div class="map-pin-name">Rose Friendly</div>
+        <div class="map-pin-addr">Near Sawraj Tractor Agency<br/>S.K Road, Radaur, Yamuna Nagar — 135133</div>
+        <div class="map-pin-phone">8222937052 &nbsp;·&nbsp; 9991370704</div>
+        <a href="https://maps.google.com/?q=SK+Road+Radaur+Yamuna+Nagar+Haryana" target="_blank" rel="noopener" class="map-directions magnetic">
+          Get Directions →
+        </a>
+      </div>
+    </div>
+
+    <!-- Info -->
+    <div class="footer-info fade-right">
+      <h2 class="footer-tagline fade-up">Come <em>hungry.</em><br/>Leave <em>delighted.</em></h2>
+      <p class="footer-body fade-up d1">A short drive from Yamuna Nagar, Rose Friendly has been Radaur's go-to for authentic Indian and Indo-Chinese cuisine. Walk in — no reservations needed.</p>
+      <div class="hours-box fade-up d2">
+        <div class="hours-row"><span>Mon, Wed – Sun</span><b>11:00 AM – 11:00 PM</b></div>
+        <div class="hours-row" style="color:var(--aa);"><span>Tuesday</span><b style="color:var(--aa);">Closed</b></div>
+      </div>
+      <div class="cta-stack fade-up d3">
+        <a href="tel:+918222937052" class="btn-call magnetic" id="btn-call" aria-label="Call Rose Friendly">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 012.74 2.13 2 2 0 014.54 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16z"/></svg>
+          Call Directly Now
+        </a>
+        <a href="https://wa.me/918222937052?text=Hello%20Rose%20Friendly!%20I%20would%20like%20to%20enquire%20about%20your%20menu." class="btn-wa magnetic" id="btn-wa" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Rose Friendly">
+          <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path class="wa-green" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom strip -->
+  <div class="footer-strip">
+    <div class="footer-strip-inner">
+      <div class="f-logo">Rose Friendly</div>
+      <div class="f-center">
+        <div class="f-copy">© 2025 Rose Friendly · S.K Road, Radaur, Yamuna Nagar, Haryana</div>
+        <div class="f-dev">Designed &amp; Developed by <span>Satyam Kamboj</span></div>
+      </div>
+      <div class="f-right">
+        <!-- REPLACE href with the restaurant's real Instagram URL -->
+        <a href="https://www.instagram.com/rose_friendly_restaurant/" target="_blank" rel="noopener noreferrer" class="f-soc" aria-label="Follow on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a id="float-wa" href="https://wa.me/918222937052?text=Hello%20Rose%20Friendly!" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- Back to top -->
+<button id="back-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<!-- Toast -->
+<div id="toast" role="alert" aria-live="polite"></div>
+
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
+<script>
+(function(){
+'use strict';
+
+/* ================================================================
+   MENU DATA
+================================================================ */
+const MENU_DATA = [
+  {
+    id:'veg-snacks', label:'Veg Snacks', icon:'🌿', type:'veg', panelNum:'01',
+    img:'https://images.unsplash.com/photo-1567337710282-00832b415979?w=380&auto=format&fit=crop&q=60',
+    desc:'Bold crispy bites and street-food classics that spark the appetite.',
+    items:[
+      {n:'Paneer 65',p:230,img:'https://images.unsplash.com/photo-1567337710282-00832b415979?w=320&auto=format&fit=crop&q=60'},
+      {n:'Dahi Kabab',p:220,img:'https://images.unsplash.com/photo-1601050690597-df0568f70950?w=320&auto=format&fit=crop&q=60'},
+      {n:'Spring Roll',p:100},{n:'Mushroom Duplex',p:230},{n:'Mushroom Curry',p:260},
+      {n:'Chilli Paneer',p:250,img:'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=320&auto=format&fit=crop&q=60'},
+      {n:'Paneer Finger',p:220},{n:'Chilli Potato',p:120},{n:'Honey Chilli Potato',p:150},
+      {n:'Crispy Corn',p:200},{n:'Corn Chaat',p:200},{n:'Chana Chaat',p:170},
+      {n:'Vegetable Saute (Gym Diet)',p:240},{n:'Kurkure Palak Patta Chaat',p:140},
+      {n:'French Fries',p:120},{n:'Masala French',p:150},{n:'Cheese French',p:220},
+      {n:'Veg Manchurian',p:180},{n:'Veg Lollipop',p:120},{n:'Chinese Bhel',p:180},
+      {n:'Peanut Masala',p:80},{n:'Masala Papad',p:80},
+    ]
+  },
+  {
+    id:'momos', label:'Momos', icon:'🥟', type:'veg', panelNum:'02',
+    img:'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=380&auto=format&fit=crop&q=60',
+    desc:"Steam-cooked, fried, tandoori and more — Haryana's street-side favourite.",
+    items:[
+      {n:'Veg Steam Momos',p:80},{n:'Veg Fry Momos',p:90},
+      {n:'Veg Chilli Momos',p:150},{n:'Veg Kurkure Momos',p:140},
+      {n:'Schezwan Momos',p:140},{n:'Veg Bhutani Momos',p:160},
+      {n:'Veg Malai Momos',p:170},{n:'Paneer Steam Momos',p:140},
+      {n:'Paneer Fry Momos',p:150},{n:'Paneer Kurkure Momos',p:180},
+      {n:'Paneer Bhutani Momos',p:190},{n:'Paneer Malai Momos',p:200},
+      {n:'Paneer Chilli Momos',p:140},{n:'Tandoori Paneer Momos',p:150},
+      {n:'Lemon Momos',p:90},{n:'Tandoori Momos',p:120},
+    ]
+  },
+  {
+    id:'chicken-momos', label:'Chicken Momos', icon:'🍗', type:'nonveg', panelNum:'03',
+    img:'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=380&auto=format&fit=crop&q=60',
+    desc:'Juicy chicken-filled momos in every style — steam, fry, tandoori and more.',
+    items:[
+      {n:'Chicken Steam Momos',p:120},{n:'Chicken Fry Momos',p:120},
+      {n:'Chicken Chilli Momos',p:150},{n:'Chicken Kurkure Momos',p:180},
+      {n:'Chicken Shezwan Momos',p:170},{n:'Chicken Bhutani Momos',p:190},
+      {n:'Chicken Malai Momos',p:200},
+    ]
+  },
+  {
+    id:'chowmein', label:'Chowmein', icon:'🍜', type:'both', panelNum:'04',
+    img:'https://images.unsplash.com/photo-1585032226651-759b368d7246?w=380&auto=format&fit=crop&q=60',
+    desc:'Wok-tossed noodles with the fire and crunch of authentic street cooking.',
+    items:[
+      {n:'Veg Chowmein',p:80},{n:'Hakka Noodles',p:140},
+      {n:'Schezwan Noodles',p:160},{n:'Chilli Noodles',p:150},
+      {n:'Singapuri Noodles',p:170},{n:'Triple Noodles',p:180},{n:'Chilli Garlic Noodles',p:170},
+    ]
+  },
+  {
+    id:'tandoori-veg', label:'Tandoori (Veg)', icon:'🔥', type:'veg', panelNum:'05',
+    img:'https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=380&auto=format&fit=crop&q=60',
+    desc:'Clay-oven perfection — smoky, charred, aromatic vegetarian kebabs.',
+    items:[
+      {n:'Veg Burasi Kabab',p:230},{n:'Hara Bhara Kabab',p:250},
+      {n:'Mushroom Tikka',p:240},{n:'Mushroom Malai Tikka',p:260},
+      {n:'Paneer Tikka',p:230},{n:'Paneer Malai Tikka',p:260},{n:'Lemon Paneer Tikka',p:270},
+    ]
+  },
+  {
+    id:'sandwich', label:'Sandwich', icon:'🥪', type:'veg', panelNum:'06',
+    img:'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=380&auto=format&fit=crop&q=60',
+    desc:'Layered, grilled, pressed — freshly made sandwiches for every palate.',
+    items:[
+      {n:'Veg Sandwich',p:100},{n:'Triple Layer Sandwich',p:130},
+      {n:'Sweet Corn Sandwich',p:150},{n:'Mexican Sandwich',p:190},{n:'Paneer Sandwich',p:180},
+    ]
+  },
+  {
+    id:'pasta', label:'Pasta', icon:'🍝', type:'both', panelNum:'07',
+    img:'https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?w=380&auto=format&fit=crop&q=60',
+    desc:'Italian-inspired dishes crafted with an Indian touch.',
+    items:[
+      {n:'White Sauce Pasta',p:160},{n:'Red Sauce Pasta',p:140},
+      {n:'Mix Sauce Pasta',p:150},{n:'Aglio Olio Pasta',p:130},
+    ]
+  },
+  {
+    id:'wraps', label:'Wraps & Rolls', icon:'🌯', type:'both', panelNum:'08',
+    img:'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=380&auto=format&fit=crop&q=60',
+    desc:'Handheld favourites — spiced fillings wrapped in fresh-rolled flatbread.',
+    items:[
+      {n:'Spicy Veg Wrap',p:120},{n:'Paneer Wrap',p:150},
+      {n:'Veg Roll',p:80},{n:'Spring Roll',p:90},
+      {n:'Egg Roll',p:100,type:'nonveg'},{n:'Egg Chicken Roll',p:170,type:'nonveg'},
+      {n:'Finger Chips',p:120},{n:'Pari Pari Finger',p:150},
+    ]
+  },
+  {
+    id:'pizza', label:'Pizza', icon:'🍕', type:'veg', panelNum:'09',
+    img:'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=380&auto=format&fit=crop&q=60',
+    desc:'Hand-tossed pizzas in three sizes — loaded with the freshest toppings.',
+    items:[
+      {n:'Cheese Onion Pizza',p:140,note:'S: ₹100 | L: ₹170'},
+      {n:'Cheese Onion Capsicum Pizza',p:180,note:'S: ₹140 | L: ₹200'},
+      {n:'Sweet Corn Pizza',p:190,note:'S: ₹150 | L: ₹210'},
+      {n:'Cheese Tomato Pizza',p:190,note:'S: ₹150 | L: ₹210'},
+      {n:'Paneer Pizza',p:200,note:'S: ₹160 | L: ₹220'},
+      {n:'Margherita Pizza',p:220,note:'S: ₹180 | L: ₹240'},
+      {n:'Jalapeno Pizza',p:210,note:'S: ₹170 | L: ₹230'},
+      {n:'Mushroom Olive Pizza',p:230,note:'S: ₹190 | L: ₹250'},
+      {n:'Tandoori Paneer Pizza',p:280,note:'S: ₹240 | L: ₹300'},
+      {n:'Makhani Pizza',p:280,note:'S: ₹240 | L: ₹300'},
+    ]
+  },
+  {
+    id:'rice', label:'Fried Rice', icon:'🍚', type:'both', panelNum:'10',
+    img:'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=380&auto=format&fit=crop&q=60',
+    desc:'Fragrant and smoky wok-tossed rice in every style imaginable.',
+    items:[
+      {n:'Plain Rice',p:90},{n:'Jeera Rice',p:110},{n:'Veg Fried Rice',p:160},
+      {n:'Schezwan Rice',p:180},{n:'Soya Fried Rice',p:150},
+      {n:'Chilli Fried Rice',p:170},{n:'Triple Rice',p:210},{n:'Garlic Fried Rice',p:190},
+      {n:'Veg Pulao',p:220},{n:'Onion Rice',p:200},{n:'Steam Rice',p:80},
+      {n:'Aloo Mutter Pulao',p:230},{n:'Cheese Fried Rice',p:180},
+    ]
+  },
+  {
+    id:'dal', label:'Dal & Curries', icon:'🍲', type:'veg', panelNum:'11',
+    img:'https://images.unsplash.com/photo-1645696301019-35adcc18cfe3?w=380&auto=format&fit=crop&q=60',
+    desc:'Slow-simmered lentils and legumes — the heartbeat of North Indian cooking.',
+    items:[
+      {n:'Dal Fry',p:110},{n:'Dal Tadka',p:130},{n:'Dal Makhani',p:170},
+      {n:'Butter Dal Fry',p:140},{n:'Rajma Masala',p:160},{n:'Palak Dal',p:170},
+      {n:'Rajasthani Chana Dal',p:140},{n:'Nizami Dal Tadka',p:190},
+      {n:'Chana Masala',p:140},{n:'Black Chana Masala',p:130},{n:'Panch Ratan Dal',p:190},
+    ]
+  },
+  {
+    id:'paneer-mains', label:'Paneer Mains', icon:'🧀', type:'veg', panelNum:'12',
+    img:'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=380&auto=format&fit=crop&q=60',
+    desc:'Rich, indulgent paneer preparations — full and half portion available.',
+    halfFull:true,
+    items:[
+      {n:'Masala Paneer',p:230,ph:130},{n:'Kadahi Paneer',p:250,ph:140},
+      {n:'Shahi Paneer',p:250,ph:140},{n:'Rara Paneer',p:260,ph:150},
+      {n:'Lemon Paneer',p:260,ph:150},{n:'Paneer Do Pyaja',p:260,ph:150},
+      {n:'Paneer Pasanda',p:280,ph:160},{n:'Paneer Butter Masala',p:280,ph:160},
+      {n:'Hyderabadi Paneer',p:290,ph:170},{n:'Paneer Lababdar',p:310,ph:180},
+      {n:'Cheese Tomato',p:230},{n:'Paneer Bhurji',p:220},
+    ]
+  },
+  {
+    id:'veg-mains', label:'Veg Mains', icon:'🌱', type:'veg', panelNum:'13',
+    img:'https://images.unsplash.com/photo-1574894709920-11b28be1b693?w=380&auto=format&fit=crop&q=60',
+    desc:'Farm-fresh seasonal vegetables cooked with masterful North Indian technique.',
+    items:[
+      {n:'Mix Veg',p:170},{n:'Jeera Aloo',p:120},{n:'Aloo Matar',p:150},
+      {n:'Aloo Do Pyaja',p:150},{n:'Veg Jalfrezi',p:130},{n:'Kadahi Vegetable',p:150},
+      {n:'Bhindi Masala',p:160},{n:'Aloo Bhuna',p:140},{n:'Veg Kolhapuri',p:190},
+      {n:'Mix Veg Handi',p:220},{n:'Adrak Aloo Gobhi',p:220},{n:'Dam Aloo',p:230},
+      {n:'Kaju Masala',p:280},{n:'Palak Paneer',p:280},{n:'Mutter Paneer',p:300},
+    ]
+  },
+  {
+    id:'chaap', label:'Chaap', icon:'🥩', type:'veg', panelNum:'14',
+    img:'https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=380&auto=format&fit=crop&q=60',
+    desc:"Haryana's beloved soya chaap — marinated, grilled, and utterly addictive.",
+    items:[
+      {n:'Masala Chaap Dry',p:170},{n:'Malai Chaap Dry',p:220},
+      {n:'Crispy Chaap',p:200},{n:'Butter Chaap',p:220},{n:'Kadahi Chaap',p:230},
+      {n:'Masala Chaap',p:250},{n:'Lemon Chaap',p:240},
+      {n:'Spl. Lemon Chaap',p:270},{n:'Chilli Chaap',p:260},
+    ]
+  },
+  {
+    id:'raita', label:'Raita & Breads', icon:'🥗', type:'veg', panelNum:'15',
+    img:'https://images.unsplash.com/photo-1551651056-2f7d42e60ef5?w=380&auto=format&fit=crop&q=60',
+    desc:'Cooling accompaniments and fresh breads to balance every spiced dish.',
+    items:[
+      {n:'Boondi Raita',p:90},{n:'Plain Dahi',p:70},{n:'Aloo Raita',p:100},{n:'Mix Raita',p:110},
+      {n:'Tawa Roti',p:10},{n:'Butter Roti',p:15},{n:'Plain Naan',p:35},{n:'Butter Naan',p:45},
+      {n:'Garlic Naan',p:80},{n:'Cheese Naan',p:90},{n:'Stuffed Naan',p:55},
+      {n:'Lachha Parantha',p:40},{n:'Aloo Parantha',p:60},{n:'Paneer Parantha',p:100},
+    ]
+  },
+  {
+    id:'egg', label:'Egg', icon:'🥚', type:'nonveg', panelNum:'16',
+    img:'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=380&auto=format&fit=crop&q=60',
+    desc:'Fresh egg preparations — quick, wholesome, and satisfying.',
+    items:[
+      {n:'2 Egg Omelette',p:50},{n:'Sunset Omelette',p:70},
+      {n:'2 Egg Bhurji',p:60},{n:'5 Egg Bhurji',p:130},
+      {n:'Egg Noodle',p:150},{n:'Egg Chilli Noodle',p:160},
+      {n:'Singapuri Egg Noodle',p:180},{n:'Egg Chilli Garlic Noodle',p:160},{n:'Egg Gravy',p:150},
+    ]
+  },
+  {
+    id:'chicken-mains', label:'Chicken Mains', icon:'🍗', type:'nonveg', panelNum:'17',
+    img:'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=380&auto=format&fit=crop&q=60',
+    desc:'Slow-cooked gravies and robust chicken preparations — Full and Half portions.',
+    halfFull:true,
+    items:[
+      {n:'Kadahi Chicken',p:580,ph:350},{n:'Butter Chicken Masala',p:600,ph:360},
+      {n:'Lemon Chicken',p:590,ph:350},{n:'Home Made Chicken',p:590,ph:350},
+      {n:'Chicken Do Pyaja',p:600,ph:360},{n:'Chicken Masala',p:590,ph:350},
+      {n:'Rara Chicken',p:600,ph:380},{n:'Malai Chicken',p:600,ph:360},
+      {n:'Dahi Chicken',p:600,ph:360},{n:'Lemon Kali Mirch Chicken',p:650,ph:380},
+      {n:'Butter Garlic Chicken',p:630,ph:380},{n:'Makhni Chicken Gravy Shahi',p:630,ph:380},
+      {n:'Chicken Tikka Masala Gravy',p:630,ph:380},{n:'Chicken Angara',p:630,ph:380},
+      {n:'Hyderabadi Chicken',p:690,ph:400},{n:'Afgani Chicken Gravy',p:360,note:'Half only'},
+    ]
+  },
+  {
+    id:'chicken-tandoor', label:'Chicken Tandoor', icon:'🍢', type:'nonveg', panelNum:'18',
+    img:'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=380&auto=format&fit=crop&q=60',
+    desc:'Clay-oven specialities — smoky, charred, and deeply marinated.',
+    items:[
+      {n:'Chicken 65',p:600},{n:'Chicken Lollypop',p:350},
+      {n:'Chicken Tikka',p:300},{n:'Malai Tikka',p:330},{n:'Lemon Chicken Tikka',p:320},
+      {n:'Kalmi Kabab (4 Pc.)',p:300},{n:'Schezwan Chicken',p:350},
+      {n:'Tangdi Kabab Stuffed',p:320},{n:'Chilli Tangdi Kabab',p:330},
+      {n:'Tandoori Chicken (H)',p:250,note:'Full: ₹430'},
+      {n:'Malai Tandoori Chicken (H)',p:300,note:'Full: ₹500'},
+      {n:'Afgani Chicken Dry (H)',p:290,note:'Full: ₹490'},
+      {n:'Lemon Tandoori Chicken (H)',p:290,note:'Full: ₹490'},
+      {n:'Chicken Pakoda (H)',p:250,note:'Full: ₹490'},
+      {n:'Lemon Chicken Dry (H)',p:330,note:'Full: ₹550'},
+    ]
+  },
+];
+
+const SIGS = [
+  {name:'Butter Chicken Masala',cat:'Chicken Mains',price:'₹600',badge:'nonveg',img:'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=380&auto=format&fit=crop&q=60'},
+  {name:'Shahi Paneer',cat:'Paneer Mains',price:'₹250',badge:'veg',img:'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=380&auto=format&fit=crop&q=60'},
+  {name:'Chicken Angara',cat:'Chicken Mains',price:'₹630',badge:'nonveg',img:'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=380&auto=format&fit=crop&q=60'},
+  {name:'Malai Chaap Dry',cat:'Chaap',price:'₹220',badge:'veg',img:'https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=380&auto=format&fit=crop&q=60'},
+  {name:'Dal Makhani',cat:'Dal & Curries',price:'₹170',badge:'veg',img:'https://images.unsplash.com/photo-1645696301019-35adcc18cfe3?w=380&auto=format&fit=crop&q=60'},
+  {name:'Paneer Tikka',cat:'Tandoori Veg',price:'₹230',badge:'veg',img:'https://images.unsplash.com/photo-1567337710282-00832b415979?w=380&auto=format&fit=crop&q=60'},
+  {name:'Rara Chicken',cat:'Chicken Mains',price:'₹600',badge:'nonveg',img:'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=380&auto=format&fit=crop&q=60'},
+  {name:'Paneer Lababdar',cat:'Paneer Mains',price:'₹310',badge:'veg',img:'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=380&auto=format&fit=crop&q=60'},
+  {name:'Chilli Chaap',cat:'Chaap',price:'₹260',badge:'veg',img:'https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=380&auto=format&fit=crop&q=60'},
+  {name:'Tandoori Chicken',cat:'Chicken Tandoor',price:'₹430',badge:'nonveg',img:'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=380&auto=format&fit=crop&q=60'},
+];
+
+/* ================================================================
+   THEME TOGGLE
+================================================================ */
+const html      = document.documentElement;
+const themeBtn  = document.getElementById('theme-btn');
+const saved = localStorage.getItem('rf-theme') || 'dark';
+html.setAttribute('data-theme', saved);
+themeBtn.textContent = saved === 'dark' ? '☀️' : '🌙';
+
+themeBtn.addEventListener('click', () => {
+  const current = html.getAttribute('data-theme');
+  const next    = current === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  themeBtn.textContent = next === 'dark' ? '☀️' : '🌙';
+  localStorage.setItem('rf-theme', next);
+});
+
+/* ================================================================
+   CURSOR
+================================================================ */
+const dot  = document.getElementById('c-dot');
+const ring = document.getElementById('c-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';});
+(function tickRing(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(tickRing);})();
+const hoverEls='a,button,.tab-btn,.dish-row,.sig-card,.nav-cta,.btn-call,.btn-wa,.btn-full-menu,.tilt-card,.map-directions,.hero-btn-primary,.hero-btn-ghost';
+document.querySelectorAll(hoverEls).forEach(el=>{
+  el.addEventListener('mouseenter',()=>document.body.classList.add('cursor-hover'));
+  el.addEventListener('mouseleave',()=>document.body.classList.remove('cursor-hover'));
+});
+
+/* ================================================================
+   HERO CANVAS — 3D depth particles (motionsites.ai inspired)
+================================================================ */
+(function initHeroCanvas(){
+  const canvas = document.getElementById('hero-canvas');
+  const ctx    = canvas.getContext('2d');
+  let W,H;
+  const particles = [];
+  const COUNT = 35; // reduced for performance
+
+  function resize(){ W=canvas.width=window.innerWidth; H=canvas.height=window.innerHeight; }
+  resize();
+  window.addEventListener('resize', resize, {passive:true});
+
+  // Each particle has a z-depth that affects size and opacity
+  for(let i=0;i<COUNT;i++){
+    particles.push({
+      x:Math.random()*1000,
+      y:Math.random()*1000,
+      z:Math.random()*600+50,        // depth 50–650
+      vx:(Math.random()-.5)*.4,
+      vy:(Math.random()-.5)*.3,
+      vz:(Math.random()-.5)*1.2,
+      color:Math.random()>.55?'#FF4500':'#D4AF37',
+    });
+  }
+
+  let mouseX=0.5,mouseY=0.5;
+  document.addEventListener('mousemove',e=>{mouseX=e.clientX/window.innerWidth;mouseY=e.clientY/window.innerHeight;},{passive:true});
+
+  const FL = 320; // focal length
+
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+
+    const shiftX=(mouseX-.5)*60;
+    const shiftY=(mouseY-.5)*40;
+
+    particles.forEach(p=>{
+      p.x+=p.vx+shiftX*.004;
+      p.y+=p.vy+shiftY*.004;
+      p.z+=p.vz;
+
+      if(p.z<10)  p.z=650;
+      if(p.z>650) p.z=10;
+      if(p.x<-100)  p.x=1100;
+      if(p.x>1100)  p.x=-100;
+      if(p.y<-100)  p.y=1100;
+      if(p.y>1100)  p.y=-100;
+
+      const scale  = FL/(FL+p.z);
+      const px     = (p.x - 500)*scale + W/2;
+      const py     = (p.y - 500)*scale + H/2;
+      const radius = Math.max(.4, 2.8*scale);
+      const alpha  = Math.min(.7, scale*.85);
+
+      ctx.beginPath();
+      ctx.arc(px,py,radius,0,Math.PI*2);
+      ctx.fillStyle = p.color.replace(')',`,${alpha})`).replace('#FF4500','rgba(255,69,0').replace('#D4AF37','rgba(212,175,55');
+      ctx.fill();
+    });
+
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* ================================================================
+   SPARKS
+================================================================ */
+const sparksEl=document.getElementById('sparks');
+for(let i=0;i<28;i++){
+  const s=document.createElement('div');s.className='sp';
+  s.style.cssText=`left:${Math.random()*100}%;width:${1+Math.random()*2.2}px;height:${1+Math.random()*2.2}px;background:${Math.random()>.55?'#FF4500':'#D4AF37'};animation-duration:${5+Math.random()*8}s;animation-delay:${Math.random()*9}s;`;
+  sparksEl.appendChild(s);
+}
+
+/* ================================================================
+   HERO SPLIT TEXT
+================================================================ */
+function splitChars(el,word,baseDelay){
+  el.innerHTML=[...word].map((c,i)=>`<span class="char" style="animation-delay:${(baseDelay+i*.06).toFixed(2)}s">${c==' '?'&nbsp;':c}</span>`).join('');
+}
+splitChars(document.getElementById('hw1'),'ROSE',.5);
+splitChars(document.getElementById('hw2'),'FRIENDLY',.8);
+
+/* ================================================================
+   HERO SCALE ON SCROLL
+================================================================ */
+const heroEl=document.getElementById('hero');
+const heroTitle=document.querySelector('.hero-title');
+function onHeroScroll(){
+  const p=Math.max(0,Math.min(1,-heroEl.getBoundingClientRect().top/heroEl.offsetHeight));
+  heroTitle.style.transform=`scale(${1+p*38}) translateY(${p*-8}%)`;
+  heroTitle.style.opacity=p<.55?1:Math.max(0,1-(p-.55)/.45);
+}
+window.addEventListener('scroll',onHeroScroll,{passive:true});
+
+/* ================================================================
+   STICKY NAV
+================================================================ */
+const navEl=document.getElementById('nav');
+window.addEventListener('scroll',()=>navEl.classList.toggle('scrolled',window.scrollY>50),{passive:true});
+
+/* ================================================================
+   MARQUEES
+================================================================ */
+function buildMarquee(trackId,items){
+  const track=document.getElementById(trackId);
+  const all=[...items,...items,...items,...items];
+  track.innerHTML=all.map(t=>`<span class="marquee-item">${t} <span class="marquee-dot">·</span></span>`).join('');
+}
+buildMarquee('mq1',['ROSE FRIENDLY','Indian Cuisine','Indo-Chinese','Tandoori Delights','Veg & Non-Veg','Open 11 AM – 11 PM','Closed Tuesdays','Radaur','Yamuna Nagar']);
+const mq2Track=document.getElementById('mq2');
+const mq2=['Paneer Tikka','Butter Chicken','Veg Momos','Chaap Specials','Dal Makhani','Noodles','Kabab','Fried Rice','Rajma','Sandwich','Schezwan'];
+mq2Track.innerHTML=[...mq2,...mq2,...mq2,...mq2].map(t=>`<span class="marquee2-item">${t}</span>`).join('');
+
+/* ================================================================
+   BUILD MENU
+================================================================ */
+const tabsEl  =document.getElementById('menu-tabs');
+const panelsEl=document.getElementById('menu-panels');
+
+MENU_DATA.forEach((cat,idx)=>{
+  const tabClass='tab-btn'+(cat.type==='veg'?' veg-tab':cat.type==='nonveg'?' nonveg-tab':' both-tab')+(idx===0?' active':'');
+  const btn=document.createElement('button');
+  btn.className=tabClass;
+  btn.setAttribute('data-icon',cat.icon);
+  btn.setAttribute('role','tab');
+  btn.setAttribute('aria-controls','panel-'+cat.id);
+  btn.setAttribute('aria-selected',idx===0?'true':'false');
+  btn.textContent=cat.label;
+  btn.addEventListener('click',()=>switchTab(cat.id));
+  btn.addEventListener('mouseenter',()=>document.body.classList.add('cursor-hover'));
+  btn.addEventListener('mouseleave',()=>document.body.classList.remove('cursor-hover'));
+  tabsEl.appendChild(btn);
+
+  const typeLabel=cat.type==='veg'?'Pure Veg':cat.type==='nonveg'?'Non-Vegetarian':'Veg & Non-Veg';
+  const panel=document.createElement('div');
+  panel.className='menu-panel'+(idx===0?' active':'');
+  panel.id='panel-'+cat.id;
+  panel.setAttribute('role','tabpanel');
+
+  const halfFullHdr=cat.halfFull?`<div style="display:flex;gap:16px;margin-left:auto;font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:var(--tx-f);align-self:center;flex-shrink:0;"><span>HALF</span><span>FULL</span></div>`:'';
+
+  const dishesHTML=cat.items.map((item,di)=>{
+    const imgSrc=item.img||cat.img;
+    const priceHTML=item.ph
+      ?`<div class="price-group"><div class="d-price-half">₹${item.ph}</div><div class="d-price">₹${item.p}</div></div>`
+      :item.p
+        ?`<div class="d-price">₹${item.p}${item.note?`<span style="font-size:.58rem;color:var(--tx-f);margin-left:6px;">${item.note}</span>`:''}</div>`
+        :`<div class="d-price" style="color:var(--tx-m);font-size:.68rem;">${item.note||'Ask staff'}</div>`;
+    const dotType=item.type||cat.type;
+    // RED dot for non-veg, GREEN only for veg
+    const dotClass=dotType==='nonveg'?'nonveg':'veg';
+    return `<div class="dish-row" data-img="${imgSrc}" style="transition-delay:${(di*.042).toFixed(2)}s" aria-label="${item.n}">
+      <div><div class="d-name">${item.n}</div></div>
+      <div class="d-right">${priceHTML}<span class="d-veg-dot ${dotClass}" title="${dotType==='nonveg'?'Non-Veg':'Veg'}"></span></div>
+    </div>`;
+  }).join('');
+
+  panel.innerHTML=`
+    <div class="panel-head">
+      <div class="panel-num">${cat.panelNum}</div>
+      <div class="panel-title-wrap">
+        <div class="panel-cat-label ${cat.type}">${typeLabel}</div>
+        <div class="panel-title">${cat.icon} ${cat.label}</div>
+        <div style="font-size:.76rem;color:var(--tx-m);margin-top:7px;max-width:440px;">${cat.desc}</div>
+      </div>
+      ${halfFullHdr}
+    </div>
+    <div class="dish-grid">${dishesHTML}</div>`;
+  panelsEl.appendChild(panel);
+});
+
+function switchTab(id){
+  document.querySelectorAll('.tab-btn').forEach(b=>{
+    const match=b.getAttribute('aria-controls')==='panel-'+id;
+    b.classList.toggle('active',match);
+    b.setAttribute('aria-selected',match);
+  });
+  document.querySelectorAll('.menu-panel').forEach(p=>p.classList.toggle('active',p.id==='panel-'+id));
+  const rows=document.querySelectorAll('#panel-'+id+' .dish-row');
+  rows.forEach(r=>r.classList.remove('in'));
+  requestAnimationFrame(()=>requestAnimationFrame(()=>rows.forEach(r=>r.classList.add('in'))));
+}
+setTimeout(()=>document.querySelectorAll('#panel-veg-snacks .dish-row').forEach(r=>r.classList.add('in')),300);
+
+/* ================================================================
+   SIGNATURE STRIP
+================================================================ */
+const sigsTrack=document.getElementById('sigs-track');
+[...SIGS,...SIGS].forEach(s=>{
+  const card=document.createElement('div');
+  card.className='sig-card tilt-card';
+  card.innerHTML=`
+    <span class="sig-badge ${s.badge}">${s.badge==='veg'?'Veg':'Non-Veg'}</span>
+    <span class="sig-price">${s.price}</span>
+    <img class="sig-img" src="${s.img}" alt="${s.name}" loading="lazy"/>
+    <div class="sig-info">
+      <div class="sig-name">${s.name}</div>
+      <div class="sig-cat">${s.cat}</div>
+    </div>`;
+  sigsTrack.appendChild(card);
+});
+
+/* ================================================================
+   3D TILT EFFECT — CSS perspective on hover
+================================================================ */
+function initTilt(selector){
+  document.querySelectorAll(selector).forEach(card=>{
+    card.addEventListener('mousemove',e=>{
+      const r=card.getBoundingClientRect();
+      const x=((e.clientX-r.left)/r.width  - .5)*18;
+      const y=((e.clientY-r.top )/r.height - .5)*-18;
+      card.style.transform=`perspective(900px) rotateX(${y}deg) rotateY(${x}deg) translateZ(8px)`;
+    });
+    card.addEventListener('mouseleave',()=>{
+      card.style.transform='perspective(900px) rotateX(0deg) rotateY(0deg) translateZ(0)';
+      card.style.transition='transform .55s cubic-bezier(.25,.46,.45,.94)';
+    });
+    card.addEventListener('mouseenter',()=>{ card.style.transition='none'; });
+  });
+}
+// Apply after DOM settles
+setTimeout(()=>initTilt('.tilt-card'),400);
+
+/* ================================================================
+   DISH HOVER PREVIEW
+================================================================ */
+const dpEl=document.getElementById('dish-preview');
+const dpImg=document.getElementById('dp-img');
+let dpTX=0,dpTY=0,dpCX=0,dpCY=0,dpRaf;
+function dpTick(){dpCX+=(dpTX-dpCX)*.09;dpCY+=(dpTY-dpCY)*.09;dpEl.style.left=dpCX+'px';dpEl.style.top=dpCY+'px';dpRaf=requestAnimationFrame(dpTick);}
+document.addEventListener('mouseover',e=>{
+  const row=e.target.closest('.dish-row');
+  if(row){const src=row.dataset.img;if(src){dpImg.src=src;dpEl.classList.add('show');dpRaf=requestAnimationFrame(dpTick);}}
+  else{dpEl.classList.remove('show');cancelAnimationFrame(dpRaf);}
+});
+document.addEventListener('mousemove',e=>{dpTX=e.clientX;dpTY=e.clientY;});
+
+/* ================================================================
+   INTERSECTION OBSERVER
+================================================================ */
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fade-up,.fade-left,.fade-right,.clip-reveal').forEach(el=>io.observe(el));
+
+const ioMenu=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ioMenu.unobserve(e.target);}});
+},{threshold:.05,rootMargin:'0px 0px -10px 0px'});
+document.querySelectorAll('.dish-row').forEach(r=>ioMenu.observe(r));
+
+/* ================================================================
+   COUNTER ANIMATION
+================================================================ */
+function animateCounter(el){
+  const target=parseInt(el.dataset.count);
+  const dur=1700;const start=performance.now();
+  function step(now){
+    const p=Math.min((now-start)/dur,1);
+    const ease=1-Math.pow(1-p,3);
+    el.textContent=Math.round(ease*target)+(target===3?'':'+');
+    if(p<1)requestAnimationFrame(step);
+    else el.textContent=target+(target===3?'':'+');
+  }
+  requestAnimationFrame(step);
+}
+const counterIO=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){animateCounter(e.target);counterIO.unobserve(e.target);}});
+},{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>counterIO.observe(el));
+
+/* ================================================================
+   MAGNETIC
+================================================================ */
+document.querySelectorAll('.magnetic').forEach(btn=>{
+  btn.addEventListener('mousemove',e=>{
+    const r=btn.getBoundingClientRect();
+    const x=(e.clientX-r.left-r.width/2)*.25;
+    const y=(e.clientY-r.top -r.height/2)*.25;
+    btn.style.transform=`translate(${x}px,${y}px) scale(1.02)`;
+  });
+  btn.addEventListener('mouseleave',()=>{btn.style.transform='';});
+});
+
+/* ================================================================
+   INIT
+================================================================ */
+onHeroScroll();
+
+/* ================================================================
+   PRELOADER
+================================================================ */
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('preloader').classList.add('hidden');
+  }, 1600);
+});
+
+/* ================================================================
+   SCROLL PROGRESS BAR
+================================================================ */
+const progressBar = document.getElementById('scroll-progress');
+function updateProgress() {
+  const doc = document.documentElement;
+  const scrolled = doc.scrollTop || document.body.scrollTop;
+  const total    = doc.scrollHeight - doc.clientHeight;
+  progressBar.style.width = (scrolled / total * 100) + '%';
+}
+window.addEventListener('scroll', updateProgress, {passive:true});
+
+/* ================================================================
+   HAMBURGER / MOBILE NAV
+================================================================ */
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobile-nav');
+
+hamburger.addEventListener('click', () => {
+  const open = document.body.classList.toggle('menu-open');
+  hamburger.setAttribute('aria-expanded', open);
+  // prevent body scroll when open
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+
+// Close on any mobile nav link click
+mobileNav.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    document.body.classList.remove('menu-open');
+    document.body.style.overflow = '';
+    hamburger.setAttribute('aria-expanded','false');
+  });
+});
+
+/* ================================================================
+   SCROLL SPY — highlight active nav link
+================================================================ */
+(function initScrollSpy() {
+  const sections = ['about','menu','sigs','gallery','footer'];
+  const navLinks = document.querySelectorAll('.nav-links a, #mobile-nav a');
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const id = e.target.id;
+        navLinks.forEach(a => {
+          const href = a.getAttribute('href');
+          a.style.color = href === '#' + id ? 'var(--ab)' : '';
+        });
+      }
+    });
+  }, { threshold: 0.35 });
+
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) spy.observe(el);
+  });
+})();
+
+/* ================================================================
+   FLOATING WHATSAPP + BACK TO TOP
+================================================================ */
+const floatWa  = document.getElementById('float-wa');
+const backTop  = document.getElementById('back-top');
+
+window.addEventListener('scroll', () => {
+  const show = window.scrollY > 400;
+  floatWa.classList.toggle('show', show);
+  backTop.classList.toggle('show', show);
+}, {passive:true});
+
+backTop.addEventListener('click', () => {
+  window.scrollTo({top:0, behavior:'smooth'});
+});
+
+/* ================================================================
+   TOAST
+================================================================ */
+const toastEl = document.getElementById('toast');
+function showToast(msg, duration = 3000) {
+  toastEl.textContent = msg;
+  toastEl.classList.add('show');
+  setTimeout(() => toastEl.classList.remove('show'), duration);
+}
+
+
+/* ================================================================
+   CURSOR HOVER — add new interactive elements
+================================================================ */
+['#float-wa','#back-top','#hamburger','.why-card','.review-card','.g-item'].forEach(sel => {
+  document.querySelectorAll(sel).forEach(el => {
+    el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+    el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+  });
+});
+
+/* ================================================================
+   3D TILT — re-run after gallery / reviews rendered
+================================================================ */
+setTimeout(() => initTilt('.tilt-card'), 800);
+
+/* ================================================================
+   COOKIE BANNER
+================================================================ */
+(function initCookie(){
+  const banner  = document.getElementById('cookie-banner');
+  const btn     = document.getElementById('cookie-accept');
+  if (!banner || !btn) return;
+  const accepted = localStorage.getItem('rf-cookies');
+  if (!accepted) {
+    // Show after short delay so preloader finishes first
+    setTimeout(() => banner.classList.add('show'), 2400);
+  }
+  btn.addEventListener('click', () => {
+    banner.classList.remove('show');
+    localStorage.setItem('rf-cookies','1');
+  });
+})();
+
+/* ================================================================
+   ACTIVE NAV LINK UNDERLINE (CSS class approach)
+================================================================ */
+(function initActiveNav(){
+  const sections  = document.querySelectorAll('section[id], footer[id]');
+  const navAs     = document.querySelectorAll('.nav-links a');
+  const observer  = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const id = e.target.id;
+      navAs.forEach(a => {
+        const active = a.getAttribute('href') === '#' + id;
+        a.style.color = active ? 'var(--ab)' : '';
+      });
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  sections.forEach(s => observer.observe(s));
+})();
+
+/* ================================================================
+   HERO BACKGROUND — already preloaded via <link rel="preload">
+   Just ensure it's visible once ready
+================================================================ */
+(function heroBgReady(){
+  const bg  = document.querySelector('.hero-bg-img');
+  if (!bg) return;
+  // The preload hint ensures the browser fetches this before JS runs
+  // bg-image is set in CSS already; just confirm it loaded
+  const test = new Image();
+  test.src = 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&auto=format&fit=crop&q=65';
+  // No action needed — CSS handles display
+})();
+
+/* ================================================================
+   KEYBOARD ESC closes mobile nav
+================================================================ */
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && document.body.classList.contains('menu-open')) {
+    document.body.classList.remove('menu-open');
+    document.body.style.overflow = '';
+    document.getElementById('hamburger').setAttribute('aria-expanded','false');
+  }
+});
+
+})();
+</script>
+<!-- ============================================================
+  DEPLOYMENT NOTES (remove before going live):
+  1. Create /menu.pdf and place your actual PDF menu here
+  2. Update <link rel="canonical"> to your real domain
+  3. Replace Instagram href with real profile URL
+  4. Update JSON-LD "url" and "sameAs" with real URLs
+  5. Add a /robots.txt file: User-agent: * / Allow: /
+  6. Add a /sitemap.xml for SEO
+  7. For HTTPS, ensure SSL is configured on your host
+============================================================ -->
+</body>
+</html>

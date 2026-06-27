@@ -1,0 +1,33 @@
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/menu.pdf"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+    Content-Disposition = "inline; filename=rose-friendly-menu.pdf"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[redirects]]
+  from = "http://rosefriendly.netlify.app/*"
+  to   = "https://rosefriendly.netlify.app/:splat"
+  status = 301
+  force  = true

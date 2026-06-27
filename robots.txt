@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Allow: /menu.pdf
+
+Sitemap: https://rosefriendly.netlify.app/sitemap.xml
