@@ -7,7 +7,7 @@
   <meta name="description" content="Rose Friendly is a Veg & Non-Veg restaurant in Radaur, Yamuna Nagar. Tandoori, Indo-Chinese, chaap and North Indian mains for breakfast, lunch and dinner." />
   <meta property="og:title"       content="Rose Friendly, Radaur's Finest Restaurant" />
   <meta property="og:description" content="Veg & Non-Veg Indian cuisine, Indo-Chinese, Tandoori & Chaap. Open 11 AM to 11 PM, closed Tuesdays. S.K Road, Radaur, Yamuna Nagar." />
-  <meta property="og:image"       content="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&auto=format&fit=crop&q=80" />
+  <meta property="og:image"       content="https://rosefriendly.netlify.app/img/food/hero-handi.jpg" />
   <meta property="og:type"        content="restaurant" />
   <meta name="twitter:card"       content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48.png" />
@@ -41,22 +41,23 @@
     "currenciesAccepted": "INR",
     "paymentAccepted": "Cash, UPI",
     "hasMenu": "https://rosefriendly.netlify.app/menu.pdf",
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&auto=format&fit=crop&q=80",
+    "image": "https://rosefriendly.netlify.app/img/food/hero-handi.jpg",
     "sameAs": ["https://www.instagram.com/rose_friendly_restaurant/"]
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
-  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1800&auto=format&fit=crop&q=70" />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="img/food/hero-handi.jpg" />
   <link rel="stylesheet" href="css/style.css" />
-  <script>document.documentElement.classList.add('js')</script>
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__rf){document.documentElement.classList.add('ready','force')}},3500)</script>
 </head>
 <body>
 
 <a class="skip" href="#menu">Skip to menu</a>
+<div id="intro" aria-hidden="true"><span>Rose Friendly</span></div>
 <div id="dish-preview" aria-hidden="true"><img id="dish-img" alt="" /></div>
+<div id="progress" aria-hidden="true"></div>
 
 <!-- Nav -->
 <header id="nav">
@@ -85,61 +86,68 @@
 
 <!-- HERO -->
 <section id="hero" aria-label="Rose Friendly">
-  <img id="hero-img" class="hero-img" src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1800&auto=format&fit=crop&q=70" alt="A spread of North Indian curries, rice and bread" fetchpriority="high" />
+  <div class="hero-media" aria-hidden="true">
+    <img class="slide on" src="img/food/hero-handi.jpg" alt="" fetchpriority="high" />
+    <img class="slide" src="img/food/hero-spread.jpg" alt="" />
+    <img class="slide" src="img/food/hero-tikka.jpg" alt="" />
+  </div>
   <div class="hero-veil" aria-hidden="true"></div>
 
   <div class="status" id="status"><i class="status-dot"></i><span id="status-text">Open 11 AM to 11 PM, closed Tuesdays</span></div>
 
   <div class="hero-body">
-    <h1 class="hero-title"><span>Rose</span> <span>Friendly</span></h1>
+    <h1 class="hero-title" data-split="chars">Rose Friendly</h1>
     <div class="hero-row">
       <p class="hero-lede">Tandoor, wok and slow-cooked dal on S.K Road, Radaur. Veg and non-veg, from breakfast to late dinner.</p>
       <div class="hero-cta">
-        <a href="#menu" class="btn btn-light">See the menu</a>
-        <a href="tel:+918222937052" class="btn btn-line">Reserve a table</a>
+        <a href="#menu" class="btn btn-light magnetic">See the menu</a>
+        <a href="tel:+918222937052" class="btn btn-glass magnetic">Reserve a table</a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- MARQUEE -->
+<section class="marquee" aria-hidden="true"><div class="mq-track" id="mq"></div></section>
+
 <!-- ABOUT -->
 <section id="about" class="sheet sheet-light" aria-label="Our story">
   <div class="about-grid">
     <div class="about-copy">
-      <h2 class="h2">A Haryanvi kitchen that cooks on real fire.</h2>
-      <p class="about-text">Rose Friendly is where Radaur goes for Dal Makhani that cooks overnight, kababs charred in the tandoor, noodles tossed in a roaring wok and chaap that falls apart on the fork. We serve breakfast, lunch and dinner with the honest portions of a home kitchen.</p>
+      <h2 class="h2" data-split="words">A Haryanvi kitchen that cooks on real fire.</h2>
+      <p class="scrub" id="scrub">Rose Friendly is where Radaur goes for Dal Makhani that cooks overnight, kababs charred in the tandoor, noodles tossed in a roaring wok and chaap that falls apart on the fork. We serve breakfast, lunch and dinner with the honest portions of a home kitchen.</p>
       <dl class="facts">
-        <div><dt>100+</dt><dd>dishes on the menu</dd></div>
-        <div><dt>15</dt><dd>years cooking in Radaur</dd></div>
-        <div><dt>6</dt><dd>days a week, closed Tuesday</dd></div>
+        <div><dt><span data-count="100">100</span>+</dt><dd>dishes on the menu</dd></div>
+        <div><dt><span data-count="15">15</span></dt><dd>years cooking in Radaur</dd></div>
+        <div><dt><span data-count="6">6</span></dt><dd>days a week, closed Tuesday</dd></div>
       </dl>
     </div>
     <div class="about-media">
-      <figure class="reveal img-a"><img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=900&auto=format&fit=crop&q=70" alt="Butter chicken in a copper bowl" loading="lazy" /></figure>
-      <figure class="reveal img-b"><img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=600&auto=format&fit=crop&q=70" alt="Tandoori chicken tikka" loading="lazy" /></figure>
+      <figure class="reveal par img-a"><img src="img/food/hero-spread.jpg" alt="A hand reaching into a copper handi on a table laid with curries and noodles" loading="lazy" /></figure>
+      <figure class="reveal par img-b"><img src="img/food/skewers.jpg" alt="Tandoori skewers of chicken and tikka on a stand with rice and bread" loading="lazy" /></figure>
     </div>
   </div>
 </section>
 
-<!-- WHY -->
+<!-- WHY: sticky stack -->
 <section id="why" class="sheet sheet-dark" aria-label="What makes us different">
-  <h2 class="h2 sec-title">Why Radaur keeps coming back</h2>
-  <div class="bento">
-    <article class="tile t1 reveal">
-      <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=1200&auto=format&fit=crop&q=70" alt="Chicken tikka from the tandoor" loading="lazy" />
-      <div class="tile-text"><h3>Real tandoor, real smoke</h3><p>Every kabab and tikka is fired in a clay tandoor. No shortcuts, no oven. The charcoal smell at the door is your first course.</p></div>
+  <h2 class="h2 sec-title" data-split="words">Why Radaur keeps coming back</h2>
+  <div class="stack" id="stack">
+    <article class="card">
+      <div class="card-text"><h3>Real tandoor, real smoke</h3><p>Every kabab and tikka is fired in a clay tandoor. No shortcuts, no oven. The charcoal smell at the door is your first course.</p></div>
+      <div class="card-img"><img src="img/food/tandoor.jpg" alt="A cook baking bread in a clay tandoor" loading="lazy" /></div>
     </article>
-    <article class="tile t2 reveal">
-      <img src="https://images.unsplash.com/photo-1567337710282-00832b415979?w=900&auto=format&fit=crop&q=70" alt="Fresh paneer starters" loading="lazy" />
-      <div class="tile-text"><h3>Fresh daily, never frozen</h3><p>Vegetables come from local mandis each morning. Roti and naan dough is made from scratch every service.</p></div>
+    <article class="card">
+      <div class="card-text"><h3>Fresh daily, never frozen</h3><p>Vegetables come from local mandis each morning. Roti and naan dough is made from scratch every service.</p></div>
+      <div class="card-img"><img src="img/food/market.jpg" alt="Fresh chillies, peppers and vegetables at a market" loading="lazy" /></div>
     </article>
-    <article class="tile t3 reveal">
-      <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=900&auto=format&fit=crop&q=70" alt="Hakka noodles with chopsticks" loading="lazy" />
-      <div class="tile-text"><h3>100+ dishes, one kitchen</h3><p>Overnight Dal Makhani and sizzling Indo-Chinese wok dishes, cooked by the same hands.</p></div>
+    <article class="card">
+      <div class="card-text"><h3>100+ dishes, one kitchen</h3><p>Overnight Dal Makhani and sizzling Indo-Chinese wok dishes, cooked by the same hands.</p></div>
+      <div class="card-img"><img src="img/food/noodles.jpg" alt="A bowl of chowmein with chopsticks" loading="lazy" /></div>
     </article>
-    <article class="tile t4 reveal">
-      <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&auto=format&fit=crop&q=70" alt="Table spread of Indian curries" loading="lazy" />
-      <div class="tile-text"><h3>Walk in hungry, walk out full</h3><p>No booking needed and no attitude. First-timers turn into regulars here.</p></div>
+    <article class="card">
+      <div class="card-text"><h3>Walk in hungry, walk out full</h3><p>No booking needed and no attitude. First-timers turn into regulars here.</p></div>
+      <div class="card-img"><img src="img/food/butter-chicken.jpg" alt="Creamy butter chicken in a bowl with herbs" loading="lazy" /></div>
     </article>
   </div>
 </section>
@@ -147,12 +155,12 @@
 <!-- THALI -->
 <section id="thali" class="sheet sheet-light" aria-label="Thali">
   <div class="sec-head">
-    <h2 class="h2">The whole meal on one plate</h2>
+    <h2 class="h2" data-split="words">The whole meal on one plate</h2>
     <p class="sec-note">Ask the staff what is on today's thali. Prices on inquiry.</p>
   </div>
   <div class="thali-grid">
     <article class="thali">
-      <div class="thali-img"><img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=900&auto=format&fit=crop&q=70" alt="Non-veg thali" loading="lazy" /></div>
+      <div class="thali-img"><img src="img/food/thali-nonveg.jpg" alt="A steel thali with curries, fried fish and flatbread" loading="lazy" /></div>
       <div class="thali-body">
         <span class="tag"><i class="vm nonveg"></i> Chef's special</span>
         <h3>Non-veg thali</h3>
@@ -160,7 +168,7 @@
       </div>
     </article>
     <article class="thali">
-      <div class="thali-img"><img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=900&auto=format&fit=crop&q=70" alt="Veg thali" loading="lazy" /></div>
+      <div class="thali-img"><img src="img/food/thali-veg.jpg" alt="A steel thali with dal makhani, rice, roti and sides" loading="lazy" /></div>
       <div class="thali-body">
         <span class="tag"><i class="vm veg"></i> Pure veg</span>
         <h3>Veg thali</h3>
@@ -173,7 +181,7 @@
 <!-- MENU -->
 <section id="menu" class="sheet sheet-paper" aria-label="Full menu">
   <div class="sec-head">
-    <h2 class="h2">The menu</h2>
+    <h2 class="h2" data-split="words">The menu</h2>
     <p class="sec-note">Over 100 dishes across Indian classics, Indo-Chinese, tandoor, pizza, chaap and more.</p>
   </div>
 
@@ -195,42 +203,43 @@
   </div>
 
   <div class="pdf-row">
-    <a href="menu.pdf" download class="btn btn-dark" id="pdf-btn">Download the menu PDF</a>
+    <a href="menu.pdf" download class="btn btn-dark magnetic" id="pdf-btn">Download the menu PDF</a>
     <small>Prices in ₹. (H) means half portion.</small>
   </div>
 </section>
 
-<!-- SIGNATURES -->
-<section id="signatures" class="sheet sheet-dark" aria-label="Most ordered dishes">
-  <div class="sec-head">
-    <h2 class="h2">Most ordered</h2>
-    <div class="arrows">
-      <button id="sig-prev" class="arrow" aria-label="Previous dishes">&larr;</button>
-      <button id="sig-next" class="arrow" aria-label="Next dishes">&rarr;</button>
+<!-- SIGNATURES: pinned horizontal scroll -->
+<section id="signatures" aria-label="Most ordered dishes">
+  <div class="hs-pin" id="hs">
+    <div class="hs-sticky sheet sheet-dark">
+      <div class="hs-head">
+        <h2 class="h2" data-split="words">Most ordered</h2>
+        <div class="hs-meta"><div class="hs-bar"><i id="hs-bar"></i></div><div class="arrows"><button id="sig-prev" class="arrow" aria-label="Previous dishes">&larr;</button><button id="sig-next" class="arrow" aria-label="Next dishes">&rarr;</button></div></div>
+      </div>
+      <div class="sig-track" id="sigs" tabindex="0" aria-label="Most ordered dishes"></div>
     </div>
   </div>
-  <div class="sig-track" id="sigs" tabindex="0" aria-label="Most ordered dishes, scroll sideways"></div>
 </section>
 
 <!-- GALLERY -->
 <section id="gallery" class="sheet sheet-light" aria-label="Photos">
   <div class="sec-head">
-    <h2 class="h2">From our pass</h2>
+    <h2 class="h2" data-split="words">From our pass</h2>
     <p class="sec-note">Plates as they leave the kitchen.</p>
   </div>
   <div class="gal">
-    <figure class="reveal g1"><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1000&auto=format&fit=crop&q=70" alt="Indian feast" loading="lazy" /><figcaption>Indian feast</figcaption></figure>
-    <figure class="reveal g2"><img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=800&auto=format&fit=crop&q=70" alt="Butter chicken" loading="lazy" /><figcaption>Butter chicken</figcaption></figure>
-    <figure class="reveal g3"><img src="https://images.unsplash.com/photo-1567337710282-00832b415979?w=700&auto=format&fit=crop&q=70" alt="Veg starters" loading="lazy" /><figcaption>Veg starters</figcaption></figure>
-    <figure class="reveal g4"><img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=800&auto=format&fit=crop&q=70" alt="Chicken tikka" loading="lazy" /><figcaption>Chicken tikka</figcaption></figure>
-    <figure class="reveal g5"><img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=1000&auto=format&fit=crop&q=70" alt="Momos" loading="lazy" /><figcaption>Momos</figcaption></figure>
-    <figure class="reveal g6"><img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=1000&auto=format&fit=crop&q=70" alt="Hakka noodles" loading="lazy" /><figcaption>Hakka noodles</figcaption></figure>
+    <figure class="reveal par g1"><img src="img/food/hero-spread.jpg" alt="Table spread of curries and noodles" loading="lazy" /><figcaption>The full spread</figcaption></figure>
+    <figure class="reveal par g2"><img src="img/food/butter-chicken.jpg" alt="Butter chicken" loading="lazy" /><figcaption>Butter chicken</figcaption></figure>
+    <figure class="reveal par g3"><img src="img/food/tandoor-inside.jpg" alt="Looking into a tandoor with bread baking on the walls" loading="lazy" /><figcaption>Inside the tandoor</figcaption></figure>
+    <figure class="reveal par g4"><img src="img/food/mixed-grill.jpg" alt="Mixed tandoori grill" loading="lazy" /><figcaption>Tandoori grill</figcaption></figure>
+    <figure class="reveal par g5"><img src="img/food/momos-steamer.jpg" alt="Momos steaming in a pot" loading="lazy" /><figcaption>Steamed momos</figcaption></figure>
+    <figure class="reveal par g6"><img src="img/food/naan-basket.jpg" alt="A basket of fresh tandoori bread" loading="lazy" /><figcaption>Fresh from the tandoor</figcaption></figure>
   </div>
 </section>
 
 <!-- REVIEWS -->
 <section id="reviews" class="sheet sheet-dark" aria-label="Customer reviews">
-  <h2 class="h2 sec-title">What regulars say</h2>
+  <h2 class="h2 sec-title" data-split="words">What regulars say</h2>
   <div class="quotes">
     <figure class="quote">
       <blockquote>The Butter Chicken here is genuinely the best I've had outside a proper dhaba in Chandigarh. The gravy has slow-cooked depth you can't fake. We drive 25 km every weekend now.</blockquote>
@@ -249,7 +258,7 @@
 
 <!-- VISIT -->
 <section id="visit" class="sheet sheet-rose" aria-label="Contact and location">
-  <h2 class="visit-title">Come hungry.</h2>
+  <h2 class="visit-title" data-split="chars">Come hungry.</h2>
   <div class="visit-grid">
     <div class="visit-info">
       <p class="lede">A short drive from Yamuna Nagar. Walk in, no reservation needed.</p>
@@ -263,9 +272,9 @@
         <div class="closed"><dt>Tuesday</dt><dd>Closed</dd></div>
       </dl>
       <div class="visit-cta">
-        <a href="tel:+918222937052" class="btn btn-light" id="btn-call">Call the restaurant</a>
-        <a href="https://wa.me/918222937052?text=Hello%20Rose%20Friendly!%20I%20would%20like%20to%20enquire%20about%20your%20menu." class="btn btn-line" id="btn-wa" target="_blank" rel="noopener noreferrer">WhatsApp us</a>
-        <a href="https://maps.google.com/?q=SK+Road+Radaur+Yamuna+Nagar+Haryana" class="btn btn-line" target="_blank" rel="noopener noreferrer">Get directions</a>
+        <a href="tel:+918222937052" class="btn btn-light magnetic" id="btn-call">Call the restaurant</a>
+        <a href="https://wa.me/918222937052?text=Hello%20Rose%20Friendly!%20I%20would%20like%20to%20enquire%20about%20your%20menu." class="btn btn-glass magnetic" id="btn-wa" target="_blank" rel="noopener noreferrer">WhatsApp us</a>
+        <a href="https://maps.google.com/?q=SK+Road+Radaur+Yamuna+Nagar+Haryana" class="btn btn-glass magnetic" target="_blank" rel="noopener noreferrer">Get directions</a>
       </div>
     </div>
     <div class="map">
@@ -277,7 +286,7 @@
 </main>
 
 <footer id="footer">
-  <div class="foot-word" aria-hidden="true">Rose Friendly</div>
+  <div class="foot-word" id="foot-word" aria-hidden="true">Rose Friendly</div>
   <div class="foot-row">
     <span>© 2026 Rose Friendly, S.K Road, Radaur, Yamuna Nagar, Haryana</span>
     <span class="foot-links">

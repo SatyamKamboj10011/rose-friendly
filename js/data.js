@@ -5,10 +5,10 @@ const MENU_DATA = [
     img:'https://images.unsplash.com/photo-1567337710282-00832b415979?w=380&auto=format&fit=crop&q=60',
     desc:'Bold crispy bites and street-food classics that spark the appetite.',
     items:[
-      {n:'Paneer 65',p:230,img:'https://images.unsplash.com/photo-1567337710282-00832b415979?w=320&auto=format&fit=crop&q=60'},
+      {n:'Paneer 65',p:230,img:'img/food/paneer-tikka.jpg'},
       {n:'Dahi Kabab',p:220,img:'https://images.unsplash.com/photo-1601050690597-df0568f70950?w=320&auto=format&fit=crop&q=60'},
       {n:'Spring Roll',p:100},{n:'Mushroom Duplex',p:230},{n:'Mushroom Curry',p:260},
-      {n:'Chilli Paneer',p:250,img:'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=320&auto=format&fit=crop&q=60'},
+      {n:'Chilli Paneer',p:250,img:'img/food/chilli-paneer.jpg'},
       {n:'Paneer Finger',p:220},{n:'Chilli Potato',p:120},{n:'Honey Chilli Potato',p:150},
       {n:'Crispy Corn',p:200},{n:'Corn Chaat',p:200},{n:'Chana Chaat',p:170},
       {n:'Vegetable Saute (Gym Diet)',p:240},{n:'Kurkure Palak Patta Chaat',p:140},
@@ -227,14 +227,14 @@ const MENU_DATA = [
 ];
 
 const SIGS = [
-  {name:'Butter Chicken Masala',cat:'Chicken Mains',price:'₹600',badge:'nonveg',img:'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=380&auto=format&fit=crop&q=60'},
-  {name:'Shahi Paneer',cat:'Paneer Mains',price:'₹250',badge:'veg',img:'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=380&auto=format&fit=crop&q=60'},
-  {name:'Chicken Angara',cat:'Chicken Mains',price:'₹630',badge:'nonveg',img:'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=380&auto=format&fit=crop&q=60'},
-  {name:'Malai Chaap Dry',cat:'Chaap',price:'₹220',badge:'veg',img:'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=380&auto=format&fit=crop&q=60'},
-  {name:'Dal Makhani',cat:'Dal & Curries',price:'₹170',badge:'veg',img:'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=380&auto=format&fit=crop&q=60'},
-  {name:'Paneer Tikka',cat:'Tandoori Veg',price:'₹230',badge:'veg',img:'https://images.unsplash.com/photo-1567337710282-00832b415979?w=380&auto=format&fit=crop&q=60'},
-  {name:'Rara Chicken',cat:'Chicken Mains',price:'₹600',badge:'nonveg',img:'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=380&auto=format&fit=crop&q=60'},
-  {name:'Paneer Lababdar',cat:'Paneer Mains',price:'₹310',badge:'veg',img:'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=380&auto=format&fit=crop&q=60'},
-  {name:'Chilli Chaap',cat:'Chaap',price:'₹260',badge:'veg',img:'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=380&auto=format&fit=crop&q=60'},
-  {name:'Tandoori Chicken',cat:'Chicken Tandoor',price:'₹430',badge:'nonveg',img:'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=380&auto=format&fit=crop&q=60'},
+  {name:'Butter Chicken Masala',cat:'Chicken Mains',price:'₹600',badge:'nonveg',img:'img/food/butter-chicken.jpg'},
+  {name:'Shahi Paneer',cat:'Paneer Mains',price:'₹250',badge:'veg',img:'img/food/shahi-paneer.jpg'},
+  {name:'Chicken Angara',cat:'Chicken Mains',price:'₹630',badge:'nonveg',img:'img/food/hero-tikka.jpg'},
+  {name:'Dal Makhani',cat:'Dal & Curries',price:'₹170',badge:'veg',img:'img/food/dal.jpg'},
+  {name:'Paneer Tikka',cat:'Tandoori Veg',price:'₹230',badge:'veg',img:'img/food/paneer-tikka.jpg'},
+  {name:'Rara Chicken',cat:'Chicken Mains',price:'₹600',badge:'nonveg',img:'img/food/rara.jpg'},
+  {name:'Paneer Lababdar',cat:'Paneer Mains',price:'₹310',badge:'veg',img:'img/food/paneer-lababdar.jpg'},
+  {name:'Chilli Paneer',cat:'Veg Snacks',price:'₹250',badge:'veg',img:'img/food/chilli-paneer.jpg'},
+  {name:'Veg Steam Momos',cat:'Momos',price:'₹80',badge:'veg',img:'img/food/momos-steamer.jpg'},
+  {name:'Tandoori Chicken',cat:'Chicken Tandoor',price:'₹430',badge:'nonveg',img:'img/food/mixed-grill.jpg'},
 ];
